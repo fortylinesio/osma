@@ -15,7 +15,7 @@ function App({ history }) {
 
   return (
     <>
-      <Route exact path="/" component={Components.Navbar} />
+      <Route exact path="/" component={Components.Main} />
     </>
   );
 }

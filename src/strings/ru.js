@@ -6,8 +6,9 @@ const ru = {
     "nav-news":"Новости",
     "nav-career":"Карьера",
     "nav-contacts":"Контакты",
-    "navbar-lang-ru": "Русский",
-    "navbar-lang-en": "English",
+    "nav-lang-ru": "Русский",
+    "nav-lang-en": "English",
+    "nav-lang-kg": "Кыргызча",
 }
 
 export default ru;

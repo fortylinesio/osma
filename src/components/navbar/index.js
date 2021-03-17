@@ -1,31 +1,28 @@
 import React from "react";
 import * as ReactRedux from "react-redux";
 import * as AppRedux from "../../redux";
-
-import "./index.css";
 import logo from "./logo.png";
+import * as strings from "../../strings/strings";
+import "./index.css";
+import ru from "../../strings/ru";
 
 export const Navbar = () => {
-  const dispatch = ReactRedux.useDispatch();
-
-  const strings = ReactRedux.useSelector((state) => state.strings);
-  const lang = ReactRedux.useSelector((state) => state.lang);
-
-  const handleLangClick = (lang) => (e) => {
-    e.preventDefault();
-
-    dispatch(AppRedux.SetLanguageAction(lang));
-  };
-
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="container-fluid">
-        <a class="navbar-brand" href="#">
+      <div className="container justify-content-between">
+        <a className="navbar-brand" href="#">
           {/* заменить на svg */}
-          <img src={logo} width="30px" height="40px" alt="Osma Group logo" class="d-inline-block align-top" />Osma Group
+          <img
+            src={logo}
+            width="30px"
+            height="40px"
+            alt="Osma Group logo"
+            className="d-inline-block align-top"
+          />
+          Osma Group
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -33,31 +30,73 @@ export const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                Главная
+
+        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
+                {strings.ru["nav-main"]}
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Features
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                {strings.ru["nav-about-us"]}
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Pricing
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                {strings.ru["nav-projects"]}
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">
-                Disabled
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                {strings.ru["nav-news"]}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {strings.ru["nav-career"]}
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/">
+                {strings.ru["nav-contacts"]}
               </a>
             </li>
           </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <div className="dropdown">
+            <button
+              className="btn btn-secondary dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              {strings.ru["nav-lang-ru"]}
+            </button>
+            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li>
+                <a className="dropdown-item" href="#">
+                  {strings.ru["nav-lang-kg"]}
+                </a>
+              </li>
+              <li>
+                <a className="dropdown-item" href="#">
+                  {strings.ru["nav-lang-en"]}
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
