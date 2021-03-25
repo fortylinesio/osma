@@ -5,3 +5,6 @@ export * from './services'
 export * from './aboutUs'
 export * from './footer'
 export * from './counter'
+export * from './objects'
+// Pages
+export * from './ObjectsPage'

@@ -5,6 +5,7 @@ import logo from "./logo.png";
 import * as strings from "../../strings/strings";
 import "./index.css";
 import ru from "../../strings/ru";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -46,7 +47,7 @@ export const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="./objects">
                 {strings.ru["nav-projects"]}
               </a>
             </li>
