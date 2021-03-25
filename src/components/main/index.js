@@ -5,6 +5,8 @@ export const Main = () => {
       <div className="App">
         <Components.Navbar />
         <Components.Header />
+        <Components.Counter />
+        <Components.Footer />
       </div>
     );
   };
