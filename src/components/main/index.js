@@ -5,6 +5,8 @@ export const Main = () => {
       <div className="App">
         <Components.Navbar />
         <Components.Header />
+        <Components.Services />
+        <Components.AboutUs />
         <Components.Counter />
         <Components.Footer />
       </div>

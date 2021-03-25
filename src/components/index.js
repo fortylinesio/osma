@@ -1,5 +1,7 @@
 export * from './navbar'
 export * from './header'
 export * from './main'
+export * from './services'
+export * from './aboutUs'
 export * from './footer'
 export * from './counter'
