@@ -1,11 +1,15 @@
 import React from "react";
-import img from "./images"
+import img from "./images";
 import "./index.css";
 
 export const Header = () => {
   return (
     <header classNameName="container">
-      <div id="carouselExampleIndicators" className="carousel slide container" data-bs-ride="carousel">
+      <div
+        id="carouselExampleIndicators"
+        className="carousel slide container"
+        data-bs-ride="carousel"
+      >
         <div className="carousel-indicators">
           <button
             type="button"
