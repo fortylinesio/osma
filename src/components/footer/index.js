@@ -11,7 +11,7 @@ export const Footer = () => {
 
   return (
     <div id="footer">
-      <footer className="bg-light text-center text-lg-start">
+      <footer className="text-center text-lg-start">
         <div className="container p-4">
           <div className="row text-left">
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -19,44 +19,44 @@ export const Footer = () => {
             </div>
 
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h6 className="mb-0">Быстрые ссылки</h6>
+              <h6 className="mb-0">{strings[lang]["footer-fast-links"]}</h6>
 
               <ul className="list-unstyled">
-                <li>О нас</li>
+                <li><a href="#aboutUs">{strings[lang]["footer-about-us"]}</a></li>
                 <li>
-                  <a href="#!" className="text-dark">
-                    Услуги
+                  <a href="#!" className="text-light">
+                  {strings[lang]["footer-services"]}
                   </a>
                 </li>
                 <li>
-                  <a href="#!" className="text-dark">
-                    Объекты
+                  <a href="#!" className="text-light">
+                  {strings[lang]["footer-objects"]}
                   </a>
                 </li>
                 <li >
-                  <a href="#!" className="text-dark">Новости</a>
+                  <a href="#!" className="text-light">{strings[lang]["footer-news"]}</a>
                 </li>
                 <li>
-                  <a href="#!" className="text-dark">Новости</a>
+                  <a href="#!" className="text-light">{strings[lang]["footer-contacts"]}</a>
                 </li>
               </ul>
             </div>
 
             <div className="col-lg-4 col-md-6 mb-4 mb-md-0">
-              <h6 className="">Контакты</h6>
+              <h6 className="">{strings[lang]["footer-contacts"]}</h6>
 
               <ul className="list-unstyled mb-0">
                 <li>
-                  <a href="#!" className="text-dark">г. Бишкек</a>
+                  <a href="#!" className="text-light">{strings[lang]["footer-city"]}</a>
                 </li>
                 <li>
-                  <a href="#!" className="text-dark">ул. Огонбаева 145</a>
+                  <a href="#!" className="text-light">{strings[lang]["footer-street"]}</a>
                 </li>
                 <li>
-                  <a href="#!" className="text-dark">osma.@gmail.com</a>
+                  <a href="#!" className="text-light">{strings[lang]["footer-mail"]}</a>
                 </li>
                 <li>
-                  <a href="#!" className="text-dark">+996557100205</a>
+                  <a href="#!" className="text-light">{strings[lang]["footer-phone"]}</a>
                 </li>
               </ul>
             </div>
@@ -66,10 +66,10 @@ export const Footer = () => {
 
               <ul className="list-unstyled">
                 <li>
-                  <a href="#!" className="text-dark">Пн-Пт с 9:00 – 18:00</a>
+                  <p href="#!" className="text-light">{strings[lang]["footer-schedule"]}</p>
                 </li>
                 <li>
-                  <a href="#!" className="text-dark">Свяжитесь с нами:</a>
+                  <p href="#!" className="text-light">{strings[lang]["footer-contact-us"]}</p>
                 </li>
               </ul>
             </div>
@@ -81,19 +81,17 @@ export const Footer = () => {
             <div style={{marginRight: 15, marginTop: 25, color: "grey"}}></div>
             <div style={{marginTop: 25}}></div>
           </div>
-          <a className="text-dark" style={{color: "grey"}} href="#">
-            {" "}
-            © 2021 Copyright: Osma construction
+          <a className="text-light" style={{color: "grey"}} href="#">
+          {strings[lang]["footer-copyright"]}
           </a>
           <a
-            className="text-dark"
+            className="text-light"
             style={{color: "grey"}}
             href="https://fortylines.io/"
             target="_blank"
             rel="noreferrer"
           >
-            {" "}
-            | This web-site is made by Fortylines.io
+            {strings[lang]["footer-fortylines"]}
           </a>
         </div>
       </footer>

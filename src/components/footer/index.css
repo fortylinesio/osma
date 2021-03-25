@@ -1,0 +1,14 @@
+#footer {
+    background: #00283F;
+    color: white;
+}
+
+#footer a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    text-underline-position: under ;
+}
