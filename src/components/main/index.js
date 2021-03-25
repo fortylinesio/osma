@@ -7,6 +7,8 @@ export const Main = () => {
         <Components.Header />
         <Components.Services />
         <Components.AboutUs />
+        <Components.Counter />
+        <Components.Footer />
       </div>
     );
   };

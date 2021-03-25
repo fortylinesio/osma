@@ -19,7 +19,7 @@
 	transition: .4s;
 }  
 
-.activities:hover {
+#services .activities:hover {
     background: #00283F;
 }
 
