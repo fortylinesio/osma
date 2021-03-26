@@ -4,7 +4,7 @@ import "./index.css";
 
 export const Header = () => {
   return (
-    <header classNameName="container">
+    <header className="container">
       <div
         id="carouselExampleIndicators"
         className="carousel slide container"

@@ -22,22 +22,28 @@ export const Footer = () => {
               <h6 className="mb-0">{strings[lang]["footer-fast-links"]}</h6>
 
               <ul className="list-unstyled">
-                <li><a href="#aboutUs">{strings[lang]["footer-about-us"]}</a></li>
+                <li>
+                  <a href="#aboutUs">{strings[lang]["footer-about-us"]}</a>
+                </li>
                 <li>
                   <a href="#!" className="text-light">
-                  {strings[lang]["footer-services"]}
+                    {strings[lang]["footer-services"]}
                   </a>
                 </li>
                 <li>
                   <a href="#!" className="text-light">
-                  {strings[lang]["footer-objects"]}
+                    {strings[lang]["footer-objects"]}
                   </a>
                 </li>
-                <li >
-                  <a href="#!" className="text-light">{strings[lang]["footer-news"]}</a>
+                <li>
+                  <a href="#!" className="text-light">
+                    {strings[lang]["footer-news"]}
+                  </a>
                 </li>
                 <li>
-                  <a href="#!" className="text-light">{strings[lang]["footer-contacts"]}</a>
+                  <a href="#!" className="text-light">
+                    {strings[lang]["footer-contacts"]}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -47,16 +53,24 @@ export const Footer = () => {
 
               <ul className="list-unstyled mb-0">
                 <li>
-                  <a href="#!" className="text-light">{strings[lang]["footer-city"]}</a>
+                  <a href="#!" className="text-light">
+                    {strings[lang]["footer-city"]}
+                  </a>
                 </li>
                 <li>
-                  <a href="#!" className="text-light">{strings[lang]["footer-street"]}</a>
+                  <a href="#!" className="text-light">
+                    {strings[lang]["footer-street"]}
+                  </a>
                 </li>
                 <li>
-                  <a href="#!" className="text-light">{strings[lang]["footer-mail"]}</a>
+                  <a href="#!" className="text-light">
+                    {strings[lang]["footer-mail"]}
+                  </a>
                 </li>
                 <li>
-                  <a href="#!" className="text-light">{strings[lang]["footer-phone"]}</a>
+                  <a href="#!" className="text-light">
+                    {strings[lang]["footer-phone"]}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -66,10 +80,17 @@ export const Footer = () => {
 
               <ul className="list-unstyled">
                 <li>
-                  <p href="#!" className="text-light">{strings[lang]["footer-schedule"]}</p>
+                  <p href="#!" className="text-light">
+                    {strings[lang]["footer-schedule"]}
+                  </p>
                 </li>
                 <li>
-                  <p href="#!" className="text-light">{strings[lang]["footer-contact-us"]}</p>
+                  <p href="#!" className="text-light">
+                    {strings[lang]["footer-contact-us"]}
+                  </p>
+                </li>
+                <li>
+                  <i className="far fa-envelope"></i>
                 </li>
               </ul>
             </div>
@@ -82,7 +103,7 @@ export const Footer = () => {
             <div style={{marginTop: 25}}></div>
           </div>
           <a className="text-light" style={{color: "grey"}} href="#">
-          {strings[lang]["footer-copyright"]}
+            {strings[lang]["footer-copyright"]}
           </a>
           <a
             className="text-light"
