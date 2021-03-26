@@ -4,3 +4,15 @@
     width: 600px;
 }
 
+#header .social-icons {
+    flex-direction: column;
+    justify-content: center;
+}
+
+#header .icon-foo {
+    text-decoration: none;
+}
+
+#header .center-icons {
+    
+}

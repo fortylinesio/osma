@@ -8,7 +8,7 @@
     color: inherit;
 }
 
-#footer a:hover {
+#footer .underline:hover {
     text-decoration: underline;
     text-underline-position: under ;
 }

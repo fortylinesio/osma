@@ -1,5 +1,5 @@
 const ru = {
-    // main
+    // navbar
     "nav-main": "Главная",
     "nav-about-us": "О нас",
     "nav-projects": "Объекты",
@@ -9,6 +9,10 @@ const ru = {
     "nav-lang-ru": "Русский",
     "nav-lang-en": "English",
     "nav-lang-kg": "Кыргызча",
+
+    // header 
+    "head-company-name":"OSMA GROUP",
+    "head-company-info":"Osma  Group занимается строительно-монтажными работами любой сложности начиная с отделочных работ заканчивая строительством зданий повышенной ответственности.",
 
     // services
     "services-title": "Услуги",

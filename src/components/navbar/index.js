@@ -4,11 +4,13 @@ import * as AppRedux from "../../redux";
 import logo from "./logo.png";
 import * as strings from "../../strings/strings";
 import "./index.css";
-import ru from "../../strings/ru";
 
 export const Navbar = () => {
+  const strings = ReactRedux.useSelector((state) => state.strings);
+  const lang = ReactRedux.useSelector((state) => state.lang);
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="navigation-bar" className="navbar navbar-expand-lg navbar-light">
       <div className="container justify-content-between">
         <a className="navbar-brand" href="#">
           {/* заменить на svg */}
@@ -37,32 +39,32 @@ export const Navbar = () => {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
-                {strings.ru["nav-main"]}
+                {strings[lang]["nav-main"]}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                {strings.ru["nav-about-us"]}
+                {strings[lang]["nav-about-us"]}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                {strings.ru["nav-projects"]}
+                {strings[lang]["nav-projects"]}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-                {strings.ru["nav-news"]}
+                {strings[lang]["nav-news"]}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                {strings.ru["nav-career"]}
+                {strings[lang]["nav-career"]}
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/">
-                {strings.ru["nav-contacts"]}
+                {strings[lang]["nav-contacts"]}
               </a>
             </li>
           </ul>
@@ -74,29 +76,14 @@ export const Navbar = () => {
               aria-label="Search"
             />
           </form>
-          <div className="dropdown">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton1"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              {strings.ru["nav-lang-ru"]}
-            </button>
-            <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li>
-                <a className="dropdown-item" href="#">
-                  {strings.ru["nav-lang-kg"]}
-                </a>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#">
-                  {strings.ru["nav-lang-en"]}
-                </a>
-              </li>
-            </ul>
-          </div>
+          <i className="fas fa-search"></i>
+          <ul className="lang-select">
+            <select className="form-select" aria-label="language">
+              <option defaultValue="ru">{strings[lang]["nav-lang-ru"]}</option>
+              <option value="kg">{strings[lang]["nav-lang-kg"]}</option>
+              <option value="en">{strings[lang]["nav-lang-en"]}</option>
+            </select>
+          </ul>
         </div>
       </div>
     </nav>

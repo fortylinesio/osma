@@ -1,3 +1,18 @@
-nav {
-    
+#navigation-bar .lang-select {
+    margin-bottom: 0;
 }
+
+#navigation-bar a:hover {
+    text-decoration: underline;
+    text-underline-position: under ;
+    text-decoration-color: #00283F;
+}
+
+#navigation-bar select {
+    border: none;
+}
+
+#navigation-bar form {
+    visibility: hidden;
+}
+

@@ -1,4 +1,5 @@
 import * as Components from "../../components"
+import "./index.css"
 
 export const Main = () => {
     return (

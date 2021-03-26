@@ -1,0 +1,7 @@
+.App {
+    font-family: 'Montserrat', sans-serif;
+}
+
+*:focus {
+    outline: none;
+}
