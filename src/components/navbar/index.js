@@ -37,9 +37,11 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                {strings.ru["nav-main"]}
-              </a>
+              <Link to="/main">
+                <a className="nav-link active" aria-current="page" href="#">
+                  {strings.ru["nav-main"]}
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -47,9 +49,11 @@ export const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="./objects">
-                {strings.ru["nav-projects"]}
-              </a>
+              <Link to="/object-page">
+                <a className="nav-link" href="">
+                  {strings.ru["nav-projects"]}
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">

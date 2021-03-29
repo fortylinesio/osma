@@ -16,6 +16,8 @@ function App({ history }) {
   return (
     <>
       <Route exact path="/" component={Components.Main} />
+      <Route exact path="/object-page" component={Components.ObjectsPage} />
+      <Route exact path="/object-info-page" component={Components.ObjectsInfoPage} />
     </>
   );
 }

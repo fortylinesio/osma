@@ -1,13 +1,13 @@
 import React from 'react';
 import * as ReactRedux from "react-redux";
-import * as Components from "../../components";
+import * as Components from "..";
 
-export const ObjectsPage = () => {
+export const ObjectsInfoPage = () => {
     return (
-      <div id="objects-page" className="">
+      <div id="object-info-page" className="">
         <Components.Navbar />
         <Components.Header />
-        <Components.Objects />
+        <Components.ObjectsInfo />
         <Components.Footer />
       </div>
     );
