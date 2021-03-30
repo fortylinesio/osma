@@ -1,9 +1,8 @@
 import React from "react";
 import * as ReactRedux from "react-redux";
-import * as AppRedux from "../../redux";
 import logo from "./logo.png";
-import * as strings from "../../strings/strings";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   const strings = ReactRedux.useSelector((state) => state.strings);
@@ -38,9 +37,11 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                {strings[lang]["nav-main"]}
-              </a>
+              <Link to="/main">
+                <a className="nav-link active" aria-current="page" href="#">
+                  {strings.ru["nav-main"]}
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
@@ -48,9 +49,11 @@ export const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                {strings[lang]["nav-projects"]}
-              </a>
+              <Link to="/object-page">
+                <a className="nav-link" href="">
+                  {strings.ru["nav-projects"]}
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
