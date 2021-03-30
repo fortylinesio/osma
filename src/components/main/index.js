@@ -1,5 +1,6 @@
 import * as Components from "../../components"
 import "./index.css"
+import data from '../data/data.json'
 
 export const Main = () => {
     return (
@@ -8,7 +9,7 @@ export const Main = () => {
         <Components.Header />
         <Components.Services />
         <Components.AboutUs />
-        <Components.Counter />
+        {data.counts.map(count => <Components.Counter key={count.id} data={count}/>)}
         <Components.Footer />
       </div>
     );
