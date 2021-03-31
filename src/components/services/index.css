@@ -26,44 +26,16 @@
     color: white;
 }
 
+#services .activities__icon {
+    fill:#00283F;
+}
 
-#services.container .activities__icon {
-    width: 40px;
-    height: 40px;
-    background-repeat: no-repeat;
-    background-size: contain;
+#services .activities:hover .activities__icon {
+    fill: white;
 }
 
 #services .row {
     margin: 0 30px 0 30px;
-}
-
-.activities__icon:hover {
-    fill: white;
-}
-
-.icon-1 {
-    background-image: url(./images/icon-1.svg);
-}
-
-.icon-2 {
-    background-image: url(./images/icon-2.svg);
-}
-
-.icon-3 {
-    background-image: url(./images/icon-3.svg);
-}
-
-.icon-4 {
-    background-image: url(./images/icon-4.svg);
-}
-
-.icon-5 {
-    background-image: url(./images/icon-5.svg);
-}
-
-.icon-6 {
-    background-image: url(./images/icon-6.svg);
 }
 
 .hr-line {

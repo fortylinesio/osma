@@ -58,7 +58,7 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" style={{textDecoration: "none"}}>
+              <Link to="/news" style={{textDecoration: "none"}}>
                 <a className="nav-link" href="#">
                   {strings[lang]["nav-news"]}
                 </a>
@@ -87,8 +87,8 @@ export const Navbar = () => {
               aria-label="Search"
             />
           </form>
-          <i className="fas fa-search"></i>
-          <ul className="lang-select">
+          <i className="d-flex fas fa-search"></i>
+          <ul className="d-flex lang-select">
             <select className="form-select" aria-label="language">
               <option defaultValue="ru">{strings[lang]["nav-lang-ru"]}</option>
               <option value="kg">{strings[lang]["nav-lang-kg"]}</option>

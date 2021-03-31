@@ -9,7 +9,7 @@ export const Main = () => {
         <Components.Header />
         <Components.Services />
         <Components.AboutUs />
-        {data.counts.map(count => <Components.Counter key={count.id} data={count}/>)}
+        {/* {data.counts.map(count => <Components.Counter key={count.id} data={count}/>)} */}
         <Components.Footer />
       </div>
     );
