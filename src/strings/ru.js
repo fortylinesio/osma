@@ -42,7 +42,26 @@ const ru = {
     "footer-schedule":"Пн-Пт с 9:00 – 18:00",
     "footer-contact-us":"Свяжитесь с нами:",
     "footer-copyright":"© 2021 Copyright: Osma construction ",
-    "footer-fortylines":"| This web-site is made by Fortylines.io"
+    "footer-fortylines":"| This web-site is made by Fortylines.io",
+    
+    // objects
+    "objects-title": "Многоэтажный жилой дом",
+    "objects-address": "г. Бишкек, мкр.  Джал-23",
+    "objects-more": "Подробнее",
+
+    // fact
+    "fact": "Факты",
+    "fact-description-top": "Два 9-этажных жилых домов были построены за 9 месяцев. Такой короткий срок сдачи объекта произведен за счет современной панельной технологии строительства.",
+    "fact-title": "Описание объекта:",
+    "fact-description-bottom": "Дома были построены по 106 улучшенной серии. Основные достоинства в отличии от старых серий это улучшенная планировка, теплоустойчивость, звукоизоляция. Общая площадь объекта составила - 6300 м2. ",
+    "city": "Город:",   
+    "city-name": "Бишкек",   
+    "beginning": "Начало:",   
+    "beginning-date": "Март 2017",   
+    "handing": "Сдача:",   
+    "handing-date": "Ноябрь 2017",   
+    "status": "Статус:",   
+    "status-name": "Завершен",   
 }
 
 export default ru;
