@@ -91,7 +91,7 @@ export const News = () => {
           </div>
           <div className="col-md-3">
             <div className="card h-100">
-              <img src={img.img5} className="card-img-top img-5" alt="..." />
+              <img src={img.img3} className="card-img-top img-5" alt="..." />
               <div className="card-body">
                 <p className="card-text">Новости архитектуры и дизайна в мире</p>
                 <div className="row row-not">
