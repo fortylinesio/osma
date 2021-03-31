@@ -1,0 +1,44 @@
+#objects-info {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#objects-info > h2 {
+    margin-bottom: 50px;
+}
+
+#objects-info .fact-text {
+    flex: 2;
+    margin-right: 50px;
+}
+
+#objects-info .fact-table {
+    flex: 1;
+}
+
+#objects-info .table {
+    box-shadow: -3px 10px 15px rgba(0, 0, 0, 0.25);
+    border-color: white;
+}
+
+#objects-info .table td {
+    padding-left: 50px;
+}
+
+@media (max-width: 995px) {
+    .facts-section {
+        /* display: block; */
+    }
+}
+
+@media (max-width: 770px) {
+    .facts-section {
+        display: block;
+        width: 400px;
+    }
+
+    #objects-info .fact-text {
+        margin-right: 0px;
+    }
+}
+

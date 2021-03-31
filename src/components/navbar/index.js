@@ -37,7 +37,7 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/main">
+              <Link to="/">
                 <a className="nav-link active" aria-current="page" href="#">
                   {strings.ru["nav-main"]}
                 </a>
