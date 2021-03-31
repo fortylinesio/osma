@@ -4,9 +4,10 @@
 
 #contacts h3{
     margin-bottom: 100px;
+    font-weight: 700;
 }
 
-#contacts .career-card {
+#contacts .contacts-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,23 +18,23 @@
     margin-left: 100px
 }
 
-#contacts .career-card > .card-inner {
+#contacts .contacts-card > .card-inner {
     /* padding: ; */
     padding: 30px;
     color: white;
 }
 
-#contacts .career-form input {
+#contacts .contacts-form input {
     border: none;
     margin-top: 30px;
 }
 
-#contacts .career-form hr {
+#contacts .contacts-form hr {
     margin: 0;
     padding: 0;
 }
 
-/* #career .career-form input:required {
+/* #contacts .contacts-form input:required {
     border: 1px solid red;
 } */
 
@@ -46,7 +47,7 @@
     z-index: -1;
 }
 
-/* #career .file-upload + label {
+/* #contacts .file-upload + label {
     font-size: 1.25em;
     font-weight: 700;
     color: white;

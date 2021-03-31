@@ -12,7 +12,7 @@ export const Contacts = () => {
             <h3 className="col-10 d-flex justify-content-start"> {strings[lang]["contacts-title"]} </h3>
             <div className="row row-cols facts-section container">
                 <div className="col container-fluid">
-                    <div className="career-card">
+                    <div className="contacts-card">
                         <div className="card-inner">
                             <p> {strings[lang]["contacts-our-address"]} </p>
                             <p> {strings[lang]["contacts-address"]} </p>
@@ -21,7 +21,7 @@ export const Contacts = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col career-form">
+                <div className="col contacts-form">
                     <div className="d-flex flex-column">
                         <p> {strings[lang]["contacts-feedback"]} </p>
                         <input placeholder={strings[lang]["contacts-name"]} required></input>
