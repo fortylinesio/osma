@@ -3,7 +3,6 @@
 .social-icons {
     display: flex;
     flex-direction: row;
-    margin-bottom: 20px;
 
     i {
       color:#00283F;
@@ -19,7 +18,7 @@
       justify-content: center;     
   
       &:not(:last-child) {
-        margin-right: 16px;
+        margin-bottom: 12px;
       }
   
       &:hover {
