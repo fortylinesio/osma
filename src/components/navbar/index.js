@@ -15,8 +15,8 @@ export const Navbar = () => {
           {/* заменить на svg */}
           <img
             src={logo}
-            width="110px"
-            height="120px"
+            width="70px"
+            height="70px"
             alt="Osma Group logo"
             className="d-inline-block align-top"
           />

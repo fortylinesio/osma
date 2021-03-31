@@ -8,8 +8,8 @@ export const Career = () => {
     const lang = ReactRedux.useSelector((state) => state.lang);
 
     return (
-        <div id="career" className="">
-            <h3 className="col-10 d-flex justify-content-end"> {strings[lang]["career-title"]} </h3>
+        <div id="career" className="container">
+            <h3 className="col-10 d-flex justify-content-start"> {strings[lang]["career-title"]} </h3>
             <div className="row row-cols facts-section container">
                 <div className="col container-fluid">
                     <div className="career-card">

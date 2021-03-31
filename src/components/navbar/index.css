@@ -16,9 +16,19 @@
     visibility: hidden;
 }
 
-#navigation-bar #navbarNav {
-    /* margin-right: 12px; */
-    /* display: flex;
+/* #navigation-bar #navbarNav {
+    margin-right: 12px;
+    display: flex;
     flex-direction: column;
-    justify-content: center; */
+    justify-content: center;
+} */
+
+#navigation-bar select {
+    border: none;
+    background: none;
+    color: white;
+}
+
+#navigation-bar .fas {
+    color: white;
 }

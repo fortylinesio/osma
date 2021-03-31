@@ -6,7 +6,7 @@ export const CareerPage = () => {
     return (
       <div id="career-page" className="">
         <Components.Navbar />
-        {/* <Components.Header /> */}
+        <Components.Header />
         <Components.Career />
         <Components.Footer />
       </div>

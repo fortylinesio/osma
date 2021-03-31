@@ -6,7 +6,7 @@ export const ContactsPage = () => {
     return (
       <div id="contacts-page" className="">
         <Components.Navbar />
-        {/* <Components.Header /> */}
+        <Components.Header />
         <Components.Contacts />
         <Components.Footer />
       </div>
