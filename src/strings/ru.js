@@ -16,7 +16,7 @@ const ru = {
 
     // services
     "services-title": "Услуги",
-    "construction": "Строительство зданий </br> 2 уровня ответственности",
+    "construction": "Строительство зданий 2 уровня ответственности",
     "water-supply": "Водоснабжение и канализация",
     "hydraulic-engineering": "Гидротехническое строительство",
     "electricity-supply": "Электроснабжение",
