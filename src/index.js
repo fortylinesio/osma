@@ -4,6 +4,7 @@ import * as AppRedux from "./redux";
 import * as ReactRedux from "react-redux";
 import * as Components from "./components";
 import { BrowserRouter, Route, withRouter } from "react-router-dom";
+import "./index.css"
 
 
 function App({ history }) {
@@ -14,11 +15,11 @@ function App({ history }) {
   }, [])
 
   return (
-    <>
+    <div className="App">
       <Route exact path="/" component={Components.Main} />
       <Route exact path="/object-page" component={Components.ObjectsPage} />
       <Route exact path="/object-info-page" component={Components.ObjectsInfoPage} />
-    </>
+    </div>
   );
 }
 

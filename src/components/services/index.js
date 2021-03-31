@@ -12,7 +12,7 @@ export const Services = () => {
             <h1 className="title">{strings[lang]["services-title"]}</h1>
             <div className="row row-cols-3 justify-content-center" style={{ textAlign: 'center' }}>
                 <div className="col activities">
-                    <div className="container activities__icon icon-1" />
+                    <svg className="container activities__icon icon-1"></svg>
                     <hr className="hr-line"/>
                     <p className="activities-info">{strings[lang]["construction"]}</p>                    
                 </div>

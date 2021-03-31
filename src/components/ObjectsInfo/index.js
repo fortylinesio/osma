@@ -8,7 +8,7 @@ export const ObjectsInfo = () => {
     const lang = ReactRedux.useSelector((state) => state.lang);
 
     return (
-        <div id="objects-info" className="container">
+        <div id="objects-info" className="container App">
             <div className="row row-cols-3 justify-content-center">
                 <div className="col">
                     <p> Два 9-этажных жилых домов были построены за 9 месяцев. Такой короткий срок сдачи объекта произведен за счет современного панельной технологии строительства. </p>

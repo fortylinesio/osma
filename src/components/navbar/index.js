@@ -2,7 +2,7 @@ import React from "react";
 import * as ReactRedux from "react-redux";
 import logo from "./logo.png";
 import "./index.css";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 export const Navbar = () => {
   const strings = ReactRedux.useSelector((state) => state.strings);
@@ -37,38 +37,46 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/main">
+              <Link to="/" style={{textDecoration: "none"}}>
                 <a className="nav-link active" aria-current="page" href="#">
                   {strings.ru["nav-main"]}
                 </a>
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                {strings[lang]["nav-about-us"]}
-              </a>
+              <Link to="/" style={{textDecoration: "none"}}>
+                <a className="nav-link" href="#">
+                  {strings[lang]["nav-about-us"]}
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <Link to="/object-page">
+              <Link to="/object-page" style={{textDecoration: "none"}}>
                 <a className="nav-link" href="">
                   {strings.ru["nav-projects"]}
                 </a>
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                {strings[lang]["nav-news"]}
-              </a>
+              <Link to="/" style={{textDecoration: "none"}}>
+                <a className="nav-link" href="#">
+                  {strings[lang]["nav-news"]}
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                {strings[lang]["nav-career"]}
-              </a>
+              <Link to="/" style={{textDecoration: "none"}}>
+                <a className="nav-link" href="/">
+                  {strings[lang]["nav-career"]}
+                </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                {strings[lang]["nav-contacts"]}
-              </a>
+              <Link to="/" style={{textDecoration: "none"}}>
+                <a className="nav-link" href="/">
+                  {strings[lang]["nav-contacts"]}
+                </a>
+              </Link>
             </li>
           </ul>
           <form className="d-flex">
