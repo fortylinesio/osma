@@ -1,6 +1,6 @@
 import React from "react";
 import * as ReactRedux from "react-redux";
-import logo from "./logo.png";
+import logo from "./logo.svg";
 import "./index.css";
 import {Link} from "react-router-dom";
 
@@ -15,12 +15,12 @@ export const Navbar = () => {
           {/* заменить на svg */}
           <img
             src={logo}
-            width="30px"
-            height="40px"
+            width="110px"
+            height="120px"
             alt="Osma Group logo"
             className="d-inline-block align-top"
           />
-          Osma Group
+          {/* Osma Group */}
         </a>
         <button
           className="navbar-toggler"
@@ -65,14 +65,14 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" style={{textDecoration: "none"}}>
+              <Link to="/career-page" style={{textDecoration: "none"}}>
                 <a className="nav-link" href="/">
                   {strings[lang]["nav-career"]}
                 </a>
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/" style={{textDecoration: "none"}}>
+              <Link to="/contacts-page" style={{textDecoration: "none"}}>
                 <a className="nav-link" href="/">
                   {strings[lang]["nav-contacts"]}
                 </a>

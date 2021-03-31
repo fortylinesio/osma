@@ -65,6 +65,30 @@ const ru = {
 
     // News
     "news-title":"Новости",
+    "status-name": "Завершен",  
+    
+    // career
+    "career-title": "Почему вы должны присоединиться к нам?",
+    "career-description": "Сотрудничество с нашими специалистами даст вам возможности для роста в профессиональном плане.",
+    "career-forms-description": "Отправьте нам свое резюме по форме ниже и мы позвоним вам в течении дня.",
+    "career-name": "Ваше имя *",
+    "career-mail": "Ваш E-Mail *",
+    "career-phone": "Номер телефона *",
+    "career-upload": "Загрузить файл",
+    "career-not-selected": "Файл не выбран",
+    "career-send": "Отправить",
+
+    // contacts
+    "contacts-title": "Контакты",
+    "contacts-our-address": "Наш адрес:",
+    "contacts-address": "г. Бишкек, ул. Огонбаева 145",
+    "contacts-number": "+996557100205",
+    "contacts-mail": "osma@gmail.com",
+    "contacts-feedback": "Обратная связь",
+    "contacts-name": "Ваше имя *",
+    "contacts-phone": "Номер телефона *",
+    "contacts-message": "Ваше сообщение *",
+    "contacts-send": "Отправить",
 }
 
 export default ru;

@@ -1,7 +1,26 @@
+#header {
+    margin-top: -150px;
+}
+
+#header .bg-area {
+    flex: 0.5 2;
+    height: 700px;
+    background-color: #00283F;    
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 0;
+}
+
+#header .bg-image {
+    margin-top: -550px;
+    margin-bottom: 150px;
+    /* background: url(pexels-scott-webb-1029615.jpg); */
+}
+
 .carousel,
 .carousel img {
-    height: 300px;
-    width: 600px;
+    height: 500px;
+    width: 900px;
 }
 
 #header .social-icons {
@@ -15,4 +34,16 @@
 
 #header .center-icons {
     
+}
+
+@media (max-width: 700px) {
+    #header .bg-area {
+        flex: 1 2;
+        width: 100%;
+        box-sizing: 0;
+    }
+
+    #header .bg-image {
+        width: 100%;
+    }
 }

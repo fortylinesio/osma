@@ -20,6 +20,9 @@ function App({ history }) {
       <Route exact path="/object-page" component={Components.ObjectsPage} />
       <Route exact path="/object-info-page" component={Components.ObjectsInfoPage} />
       <Route exact path="/news" component={Components.News} />
+      <Route exact path="/career-page" component={Components.CareerPage} />
+      <Route exact path="/contacts" component={Components.Contacts} />
+      <Route exact path="/contacts-page" component={Components.ContactsPage} />
     </div>
   );
 }
