@@ -12,7 +12,7 @@ export const ObjectsInfo = () => {
             <h2 className="col-10 d-flex justify-content-end"> {strings[lang]["fact"]} </h2>
             <div className="row row-cols facts-section">
                 <div className="col fact-text">
-                    <p> {strings[lang]["fact-description-top"]} </p>
+                    <p style={{marginBottom: "40px"}}> {strings[lang]["fact-description-top"]} </p>
                     <h5> {strings[lang]["fact-title"]} </h5>
                     <p> {strings[lang]["fact-description-bottom"]} </p>
                 </div>

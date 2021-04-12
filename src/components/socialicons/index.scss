@@ -3,6 +3,7 @@
 .social-icons {
     display: flex;
     flex-direction: row;
+    // justify-content: center;
 
     i {
       color:#00283F;
@@ -28,4 +29,10 @@
       }
     }
   }
+
+ @media (max-width: 990px) {
+   .social-icons {
+     justify-content: center;
+   }
+ } 
   

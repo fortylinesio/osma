@@ -1,3 +1,6 @@
+.main {
+  overflow-x: hidden;
+}
 
 *:focus {
     outline: none;

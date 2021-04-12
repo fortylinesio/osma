@@ -10,9 +10,8 @@ export const Navbar = () => {
 
   return (
     <nav id="navigation-bar" className="navbar navbar-expand-lg navbar-light">
-      <div className="container justify-content-between">
+      <div className="container-fluid justify-content-between">
         <a className="navbar-brand" href="#">
-          {/* заменить на svg */}
           <img
             src={logo}
             width="70px"
@@ -20,9 +19,8 @@ export const Navbar = () => {
             alt="Osma Group logo"
             className="d-inline-block align-top"
           />
-          {/* Osma Group */}
         </a>
-        <button
+        {/* <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -32,9 +30,9 @@ export const Navbar = () => {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> */}
 
-        <div className="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/" style={{textDecoration: "none"}}>
@@ -73,7 +71,7 @@ export const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link to="/contacts-page" style={{textDecoration: "none"}}>
-                <a className="nav-link" href="/">
+                <a className="nav-link" href="/" style={{color: "white"}}>
                   {strings[lang]["nav-contacts"]}
                 </a>
               </Link>

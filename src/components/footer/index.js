@@ -15,11 +15,11 @@ export const Footer = () => {
         <div className="container p-4">
           <div className="row text-left">
             <div className="col-lg-1  mb-4 mb-md-0">
-              <img src={logo} width="30px" height="40px" alt="Logo" />
+              <img src={logo} width="50px" height="65px" alt="Logo" />
             </div>
 
-            <div className="col-lg-3  mb-4 mb-md-0">
-              <h6 className="mb-0">{strings[lang]["footer-fast-links"]}</h6>
+            <div className="col-lg-3  mb-4 mb-md-0 footer-columns-1">
+              <h6 className="">{strings[lang]["footer-fast-links"]}</h6>
 
               <ul className="list-unstyled">
                 <li>
@@ -42,13 +42,13 @@ export const Footer = () => {
                 </li>
                 <li>
                   <a href="#!" className="text-light underline">
-                    {strings[lang]["footer-contacts"]}
+                    {strings[lang]["footer-careers"]}
                   </a>
                 </li>
               </ul>
             </div>
 
-            <div className="col-lg-4  mb-4 mb-md-0">
+            <div className="col-lg-4  mb-4 mb-md-0 footer-columns-2">
               <h6 className="">{strings[lang]["footer-contacts"]}</h6>
 
               <ul className="list-unstyled mb-0">
@@ -75,7 +75,7 @@ export const Footer = () => {
               </ul>
             </div>
 
-            <div className="col-lg-4  mb-4 mb-md-0">
+            <div className="col-lg-4  mb-4 mb-md-0 footer-columns-3">
               <h6 className="mb-0"></h6>
 
               <ul className="list-unstyled">

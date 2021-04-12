@@ -2,8 +2,12 @@
     margin-top: -150px;
 }
 
+#header .carousel-inner {
+    margin-top: 20px;
+}
+
 #header .bg-area {
-    flex: 0.5 2;
+    flex: 0.6;
     height: 700px;
     background-color: #00283F;    
     background-repeat: no-repeat;
@@ -32,10 +36,6 @@
     text-decoration: none;
 }
 
-#header .center-icons {
-    
-}
-
 @media (max-width: 700px) {
     #header .bg-area {
         flex: 1 2;
@@ -46,4 +46,8 @@
     #header .bg-image {
         width: 100%;
     }
+}
+
+@media (max-width: 990px) {
+    #header .bg-area {}
 }

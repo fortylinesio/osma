@@ -71,7 +71,7 @@ export const Header = () => {
               <span className="visually-hidden">Next</span>
             </button>
           </div>
-          <div className="col-1 center-icons">
+          <div className="col-1 d-flex align-items-center">
             <SocialIcons />
           </div>  
         </div>

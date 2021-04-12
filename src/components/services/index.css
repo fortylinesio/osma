@@ -43,3 +43,9 @@
 	border-top: 1.5px solid #00283F;
     transition: .4s;
 }
+
+@media (max-width: 770px) {
+    #services .activities {
+        height: 200px;
+    }
+}

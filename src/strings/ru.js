@@ -35,6 +35,7 @@ const ru = {
     "footer-objects": "Объекты",
     "footer-news": "Новости",
     "footer-contacts": "Контакты",
+    "footer-careers": "Карьера",
     "footer-city":"г. Бишкек",
     "footer-street":"ул. Огонбаева 145",
     "footer-mail":"osma.@gmail.com",

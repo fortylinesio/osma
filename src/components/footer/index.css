@@ -2,6 +2,8 @@
     background: #00283F;
     color: white;
     margin-top: 200px;
+    line-height: 30px;
+    padding-top: 30px;
 }
 
 #footer a {
@@ -12,4 +14,23 @@
 #footer .underline:hover {
     text-decoration: underline;
     text-underline-position: under ;
+}
+
+#footer h6 {
+    margin-bottom: 20px ;
+}
+
+@media (max-width: 990px) {
+
+    #footer .footer-columns-1 {
+        order: 2;
+    }
+
+    #footer .footer-columns-2 {
+        order: 3;
+    }
+
+    #footer .footer-columns-3 {
+        order: 1;
+    }
 }
