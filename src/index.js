@@ -31,7 +31,7 @@ const AppRouter = withRouter(App);
 
 ReactDOM.render(
   <ReactRedux.Provider store={AppRedux.store}>
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <AppRouter />
     </BrowserRouter>
   </ReactRedux.Provider>,
