@@ -1,4 +1,8 @@
 const ru = {
+    "ru": "RU",
+    "en": "EN",
+    "kg": "KG",
+
     // navbar
     "nav-main": "Главная",
     "nav-about-us": "О нас",

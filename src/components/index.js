@@ -1,4 +1,5 @@
 export * from './Navbar'
+export * from './NavbarMobile'
 export * from './Header'
 export * from './Services'
 export * from './AboutUs'

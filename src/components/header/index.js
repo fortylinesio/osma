@@ -1,15 +1,41 @@
 import React from "react";
 import img from "./images";
 import "./index.css";
+
 import { SocialIcons } from "../../components"
 
-export const Header = () => {
+export const Header = ({ currentPage }) => {
+
+  const pageImages = {
+    '/': [
+      img.img1,
+      img.img2,
+    ],
+    '/news': [
+      img.img3,
+    ],
+  }
+
+  const [currentImages, setCurrentImages] = React.useState(pageImages[currentPage]);
+
+  React.useEffect(() => {
+    setCurrentImages(pageImages[currentPage] || [])
+  }, [currentPage]);
+
+  React.useEffect(() => {
+    var myCarousel = document.querySelector('#carouselExampleIndicators')
+    var carousel = new window.bootstrap.Carousel(myCarousel, {
+      interval: 2000,
+      wrap: false
+    })
+  }, [currentImages]);
+
   return (
     <header id="header" className="">
       <div className="container-fluid">
         <div className='row'>
           <div className='col' />
-          <div className='col bg-area'/>
+          <div className='col bg-area' />
         </div>
       </div>
       <div className="container-fluid">
@@ -20,7 +46,18 @@ export const Header = () => {
             data-bs-ride="carousel"
           >
             <div className="carousel-indicators">
-              <button
+              {currentImages.map((image, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators"
+                  data-bs-slide-to={i + 1}
+                  className="active"
+                  aria-current="true"
+                  aria-label={"Slide " + (i + 1)}
+                />
+              ))}
+              {/* <button
                 type="button"
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide-to="0"
@@ -39,10 +76,15 @@ export const Header = () => {
                 data-bs-target="#carouselExampleIndicators"
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
-              ></button>
+              ></button> */}
             </div>
             <div className="carousel-inner">
-              <div className="carousel-item active">
+              {currentImages.map((image, i) => (
+                <div key={i} className="carousel-item active">
+                  <img src={image} className="d-block" alt="img1" />
+                </div>
+              ))}
+              {/* <div className="carousel-item active">
                 <img src={img.img1} className="d-block" alt="img1" />
               </div>
               <div className="carousel-item">
@@ -50,7 +92,7 @@ export const Header = () => {
               </div>
               <div className="carousel-item">
                 <img src={img.img3} className="d-block" alt="img3" />
-              </div>
+              </div> */}
             </div>
             <button
               className="carousel-control-prev"
@@ -73,7 +115,7 @@ export const Header = () => {
           </div>
           <div className="col-1 d-flex align-items-center">
             <SocialIcons />
-          </div>  
+          </div>
         </div>
       </div>
     </header>

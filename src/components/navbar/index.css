@@ -23,6 +23,11 @@
     transition: background-size .3s;
 }
 
+#navigation-bar a:after {
+    color: white;
+    mix-blend-mode: difference;
+}
+
 #navigation-bar a:hover {
     background-size: 100% 1px;
 }
@@ -53,5 +58,10 @@
 
 #navigation-bar .form-select {
     padding: 0;
-    
+}
+
+@media (max-width: 992px) {
+    #navigation-bar {
+        display: none !important;
+    }
 }

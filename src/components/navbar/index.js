@@ -1,35 +1,15 @@
 import React from "react";
-import * as ReactRedux from "react-redux";
-import logo from "./logo.svg";
-import "./index.css";
 import { Link } from "react-router-dom";
 
-export const Navbar = () => {
+import * as ReactRedux from "react-redux";
+import logo from "./logo.svg";
+
+import "./index.css";
+
+export const Navbar = ({ currentPage }) => {
   const strings = ReactRedux.useSelector((state) => state.strings);
   const lang = ReactRedux.useSelector((state) => state.lang);
 
-  const [isActive, setActive] = React.useState(false);
-
-  React.useEffect(() => {
-    if (isActive) {
-      window.scrollTo(0, 0);
-    }
-
-    const menu = document.getElementById('mobile-menu');
-    if (menu) {
-      if (isActive) {
-        menu.style.height = '100%';
-      } else {
-        setTimeout(() => {
-          menu.style.height = '0';
-        }, 320);
-      }
-    }
-  }, [isActive])
-
-  const handleBurgerClick = () => {
-    setActive(!isActive)
-  }
 
   // const handleLanguageClick = (lang: 'en' | 'de' | 'ru') => (e: React.MouseEvent) => {
   //   e.preventDefault();
@@ -39,7 +19,7 @@ export const Navbar = () => {
   return (
     <nav id="navigation-bar" className="navbar navbar-expand-lg navbar-light">
       <div className="container-fluid justify-content-between">
-        <a href="#" className="navbar-brand">
+        <a href="/" className="navbar-brand">
           <img
             src={logo}
             width="70px"
@@ -48,27 +28,28 @@ export const Navbar = () => {
             className="d-inline-block align-top"
           />
         </a>
-        <div className={'navbar-burger' + (isActive ? ' is-active' : '')} onClick={handleBurgerClick}>
-          <span aria-hidden='true' />
-          <span aria-hidden='true' />
-          <span aria-hidden='true' />
-        </div>
-
-
         <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link active" style={{ textDecoration: "none" }}>
+              <Link to="/" className="nav-link" style={{ textDecoration: "none" }}>
                 {strings.ru["nav-main"]}
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link" style={{ textDecoration: "none" }}>
+              <a href="/#about-us" className="nav-link" style={{ textDecoration: "none" }} onClick={e => {
+                const el = document.getElementById('about-us');
+                if (el !== null) {
+                  el.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                }
+              }}>
                 {strings[lang]["nav-about-us"]}
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link to="/object-page" className="nav-link" style={{ textDecoration: "none" }}>
+              <Link to="/objects" className="nav-link" style={{ textDecoration: "none" }}>
                 {strings.ru["nav-projects"]}
               </Link>
             </li>
@@ -78,12 +59,12 @@ export const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/career-page" className="nav-link" style={{ textDecoration: "none" }}>
+              <Link to="/career" className="nav-link" style={{ textDecoration: "none" }}>
                 {strings[lang]["nav-career"]}
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/contacts-page" className="nav-link" style={{ textDecoration: "none" }}>
+              <Link to="/contacts" className="nav-link" style={{ textDecoration: "none" }}>
                 {strings[lang]["nav-contacts"]}
               </Link>
             </li>
