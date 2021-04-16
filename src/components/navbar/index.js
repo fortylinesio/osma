@@ -1,12 +1,54 @@
 import React from "react";
 import * as ReactRedux from "react-redux";
+import * as AppRedux from '../../redux';
 import logo from "./logo.svg";
 import "./index.css";
 import {Link} from "react-router-dom";
 
 export const Navbar = () => {
+  const dispatch = ReactRedux.useDispatch();
+
   const strings = ReactRedux.useSelector((state) => state.strings);
   const lang = ReactRedux.useSelector((state) => state.lang);
+
+  const [isActive, setActive] = React.useState(false);
+
+  React.useEffect(() => {
+    if (isActive) {
+      window.scrollTo(0, 0);
+    }
+
+    const menu = document.getElementById('mobile-menu');
+    if (menu) {
+      if (isActive) {
+        menu.style.height = '100%';
+      } else {
+        setTimeout(() => {
+          menu.style.height = '0';
+        }, 320);
+      }
+    }
+  }, [isActive])
+
+  const handleBurgerClick = () => {
+    setActive(!isActive)
+  }
+
+  // const handleLanguageClick = (lang: 'en' | 'de' | 'ru') => (e: React.MouseEvent) => {
+  //   e.preventDefault();
+  //   dispatch(AppRedux.SetLanguage(lang));
+  // };
+
+  const jumpToContacts = () => {
+    setActive(false);
+    const el = document.getElementById('contacts');
+    if (el) {
+      el.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  }
 
   return (
     <nav id="navigation-bar" className="navbar navbar-expand-lg navbar-light">
@@ -20,17 +62,12 @@ export const Navbar = () => {
             className="d-inline-block align-top"
           />
         </a>
-        {/* <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button> */}
+        <div className={'navbar-burger' + (isActive ? ' is-active' : '')} onClick={handleBurgerClick}>
+          <span aria-hidden='true' />
+          <span aria-hidden='true' />
+          <span aria-hidden='true' />
+        </div>
+  
 
         <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
           <ul className="navbar-nav">
@@ -77,6 +114,7 @@ export const Navbar = () => {
               </Link>
             </li>
           </ul>
+        </div>
           <form className="d-flex">
             <input
               className="form-control me-2"
@@ -93,7 +131,6 @@ export const Navbar = () => {
               <option value="en">{strings[lang]["nav-lang-en"]}</option>
             </select>
           </ul>
-        </div>
       </div>
     </nav>
   );

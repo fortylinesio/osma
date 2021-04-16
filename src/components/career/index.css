@@ -24,6 +24,11 @@
     color: white;
 }
 
+#career .career-form .flex-column {
+    width: auto;
+    margin-right: 100px;
+}
+
 #career .career-form input {
     border: none;
     margin-top: 30px;
@@ -61,4 +66,31 @@
     background: #00283F;
     color: white;
     border-radius: 5px;
+}
+
+@media (max-width: 1200px) {
+    #career .career-card {  
+        width: 350px;
+        height: 350px;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    #career .career-card { 
+        width: 630px;
+        height: 250px;
+        margin-left: 0;
+    }
+
+    #career .career-form .flex-column {
+        margin-right: 0;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 770px) {
+    #career .career-card {  
+        
+    }
 }

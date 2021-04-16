@@ -37,9 +37,9 @@
     margin-left: 20px;
 }
 
-#navigation-bar form:hover {
-    visibility: ;
-}
+/* #navigation-bar form:hover {
+    visibility: none;
+} */
 
 #navigation-bar select {
     border: none;

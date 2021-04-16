@@ -15,7 +15,7 @@ export const News = () => {
       <div id="news" className="container">
         <div className="row row1">
           <h1>{strings[lang]["news-title"]}</h1>
-          <div className="col-md-6">
+          <div className="col-md-6 news-card">
             <div className="card card-cstm h-100">
               <img src={img.img1} className="card-img-top img-1" alt="..." />
               <div className="card-body card-body-cstm">
@@ -31,11 +31,13 @@ export const News = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-6">
+          <div className="col-md-6 news-card">
             <div className="card card-cstm h-100">
               <img src={img.img2} className="card-img-top img-2" alt="..." />
               <div className="card-body card-body-cstm">
-                <p className="card-text">Тепловые сети систем централизованного теплоснабжения</p>
+                <p className="card-text">
+                  Тепловые сети систем централизованного теплоснабжения
+                </p>
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
@@ -47,11 +49,13 @@ export const News = () => {
           </div>
         </div>
         <div className="row row2">
-          <div className="col-md-3">
+          <div className="col-md-3 news-card">
             <div className="card h-100">
               <img src={img.img3} className="card-img-top img-3" alt="..." />
               <div className="card-body">
-                <p className="card-text">Новости архитектуры и дизайна в мире</p>
+                <p className="card-text">
+                  Новости архитектуры и дизайна в мире
+                </p>
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
@@ -61,11 +65,13 @@ export const News = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 news-card">
             <div className="card h-100">
               <img src={img.img4} className="card-img-top img-4" alt="..." />
               <div className="card-body">
-                <p className="card-text">Новости архитектуры и дизайна в мире</p>
+                <p className="card-text">
+                  Новости архитектуры и дизайна в мире
+                </p>
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
@@ -75,11 +81,13 @@ export const News = () => {
               </div>
             </div>
           </div>
-          <div className="col-md-3">
+          <div className="col-md-3 news-card">
             <div className="card h-100">
               <img src={img.img5} className="card-img-top img-5" alt="..." />
               <div className="card-body">
-                <p className="card-text">Новости архитектуры и дизайна в мире</p>
+                <p className="card-text">
+                  Новости архитектуры и дизайна в мире
+                </p>
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
@@ -93,7 +101,9 @@ export const News = () => {
             <div className="card h-100">
               <img src={img.img3} className="card-img-top img-5" alt="..." />
               <div className="card-body">
-                <p className="card-text">Новости архитектуры и дизайна в мире</p>
+                <p className="card-text">
+                  Новости архитектуры и дизайна в мире
+                </p>
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
