@@ -1,35 +1,31 @@
-#aboutUs {
+#about-us {
+    background-color: #00283F;
+    color: #FFFFFF;
     margin-bottom: 150px;
 }
 
-#aboutUs .container-fluid {
-
-    background-color: #00283F;
-    color: #FFFFFF;
-}
-
-#aboutUs .about-us-area {
+#about-us .about-us-area {
     transition: height .4s;
 }
 
-#aboutUs .about-us-title {
+#about-us .about-us-title {
     font-size: 50px;
     margin-top: 40px;
     margin-bottom: 20px;
 }
 
-#aboutUs .about-us-name {
+#about-us .about-us-name {
     font-size: 26px;
     margin-bottom: 15px;
 }
 
-#aboutUs .about-us-description {
+#about-us .about-us-description {
     font-size: 20px;
     line-height: 36px;
     padding-bottom: 50px;
 }
 
-#aboutUs .bg-image {
+#about-us .bg-image {
     height: 750px;
     background-image: url(./images/about-us.jpg);
     clip-path: circle(50% at 50% 50%);
@@ -40,19 +36,19 @@
 }
 
 @media (max-width: 990px) {
-    #aboutUs .about-us-area {
+    #about-us .about-us-area {
         text-align: center;
     }
  
-    #aboutUs .about-us-title {
+    #about-us .about-us-title {
         font-size: 40px;
     }
     
-    #aboutUs .about-us-description {
+    #about-us .about-us-description {
         font-size: 15px;
     }
 
-    #aboutUs .bg-image {
+    #about-us .bg-image {
         background-image: none;
         height: 0;
     }

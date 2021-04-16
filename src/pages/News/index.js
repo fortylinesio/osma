@@ -1,17 +1,14 @@
 import React from "react";
-import * as Component from "..";
 import * as ReactRedux from "react-redux";
-import "./index.css";
 import img from "./images";
-import {Link} from "react-router-dom";
+
+import "./index.css";
 
 export const News = () => {
   const strings = ReactRedux.useSelector((state) => state.strings);
   const lang = ReactRedux.useSelector((state) => state.lang);
   return (
     <div>
-      <Component.Navbar />
-      <Component.Header />
       <div id="news" className="container">
         <div className="row row1">
           <h1>{strings[lang]["news-title"]}</h1>
@@ -115,7 +112,6 @@ export const News = () => {
           </div>
         </div>
       </div>
-      <Component.Footer />
     </div>
   );
 };

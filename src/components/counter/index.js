@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import * as ReactRedux from "react-redux";
 import "./index.css";
 
 export const Counter = props => {
@@ -11,7 +10,7 @@ export const Counter = props => {
   useEffect(() => {
     let start = 0;
     // first three numbers from props
-    const end = parseInt(finalNumber.substring(0,3))
+    const end = parseInt(finalNumber.substring(0, 3))
     // if zero, return
     if (start === end) return;
 
@@ -25,7 +24,7 @@ export const Counter = props => {
     let timer = setInterval(() => {
       start += 1;
       setCount(String(start) + finalNumber.substring(3))
-      if (start === end) clearInterval(timer)       
+      if (start === end) clearInterval(timer)
     }, incrementTime);
 
     // dependency array
@@ -39,6 +38,6 @@ export const Counter = props => {
         </div>
       </div>
     </div>
-    
+
   );
 };

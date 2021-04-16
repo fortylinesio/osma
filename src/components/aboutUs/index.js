@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ReactRedux from "react-redux";
-// import * as Components from "../../components";
+
 import "./index.css";
 
 export const AboutUs = () => {
@@ -8,8 +8,8 @@ export const AboutUs = () => {
     const lang = ReactRedux.useSelector((state) => state.lang);
 
     return (
-        <div id="aboutUs" className="" style={{ marginTop: 50 }}>
-            <div className="container-fluid">
+        <div id="about-us">
+            <div className="container">
                 <div className="row">
                     <div className="col about-us-area">
                         <div className="container">
@@ -20,7 +20,7 @@ export const AboutUs = () => {
                     </div>
                     <div className="col-lg-7 bg-image" />
                 </div>
-           </div>   
+            </div>
         </div>
     );
 

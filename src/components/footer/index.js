@@ -2,7 +2,6 @@ import React from "react";
 import * as ReactRedux from "react-redux";
 import * as Components from "../../components";
 import logo from "./logo.png";
-import {Link} from "react-router-dom";
 import "./index.css";
 
 export const Footer = () => {
@@ -76,8 +75,6 @@ export const Footer = () => {
             </div>
 
             <div className="col-lg-4  mb-4 mb-md-0 footer-columns-3">
-              <h6 className="mb-0"></h6>
-
               <ul className="list-unstyled">
                 <li>
                   <p href="#!" className="text-light">
@@ -90,7 +87,7 @@ export const Footer = () => {
                   </p>
                 </li>
                 <li>
-                 <Components.SocialIcons />
+                  <Components.SocialIcons />
                 </li>
               </ul>
             </div>
@@ -99,15 +96,15 @@ export const Footer = () => {
 
         <div className="text-center p-3">
           <div className="d-flex justify-content-end">
-            <div style={{marginRight: 15, marginTop: 25, color: "grey"}}></div>
-            <div style={{marginTop: 25}}></div>
+            <div style={{ marginRight: 15, marginTop: 25, color: "grey" }}></div>
+            <div style={{ marginTop: 25 }}></div>
           </div>
-          <a className="text-light underline" style={{color: "grey"}} href="#">
+          <a href="#" className="text-light underline" style={{ color: "grey" }}>
             {strings[lang]["footer-copyright"]}
           </a>
           <a
             className="text-light underline"
-            style={{color: "grey"}}
+            style={{ color: "grey" }}
             href="https://fortylines.io/"
             target="_blank"
             rel="noreferrer"
