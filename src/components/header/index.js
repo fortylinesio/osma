@@ -2,7 +2,7 @@ import React from "react";
 import img from "./images";
 import "./index.css";
 
-import { SocialIcons } from "../../components"
+import { SocialIcons } from ".."
 
 export const Header = ({ currentPage }) => {
 

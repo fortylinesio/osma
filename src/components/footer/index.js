@@ -1,6 +1,6 @@
 import React from "react";
 import * as ReactRedux from "react-redux";
-import * as Components from "../../components";
+import * as Components from "..";
 import logo from "./logo.png";
 import "./index.css";
 
