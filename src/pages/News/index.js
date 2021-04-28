@@ -1,7 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 import * as ReactRedux from "react-redux";
+// import { Link } from 'react-router-dom';
 import img from "./images";
 
+// import "./headerNews.js";
 import "./index.css";
 
 export const News = () => {
@@ -9,6 +11,7 @@ export const News = () => {
   const lang = ReactRedux.useSelector((state) => state.lang);
   return (
     <div>
+      {/* <Link to="/headerNews" className="card-link" /> */}
       <div id="news" className="container">
         <div className="row row1">
           <h1>{strings[lang]["news-title"]}</h1>

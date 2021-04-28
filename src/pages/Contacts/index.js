@@ -82,14 +82,14 @@ export const Contacts = () => {
                     </div>
                 </div>
                 <iframe
+                    className="container-fluid"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.237184428587!2d74.58929301485102!3d42.867837710876266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389ec828746e60af%3A0xbdd8b2ff7bf4ab58!2z0JHQvtC60L7QvdCx0LDQtdCy0LAsIDE0NSwgMTQ1INCR06nQutOp0L3QsdCw0LXQsiDQutOp0YfTqdGB0q8sINCR0LjRiNC60LXQug!5e0!3m2!1sru!2skg!4v1617173143280!5m2!1sru!2skg"
-                    width="600"
                     height="450"
                     loading="lazy"
                     title="map"
                 >
                 </iframe>
-            </div>
+            </div>w
         </div>
     );
 }

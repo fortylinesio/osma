@@ -9,7 +9,7 @@ export const AboutUs = () => {
 
     return (
         <div id="about-us">
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="col about-us-area">
                         <div className="container">

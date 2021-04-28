@@ -1,4 +1,5 @@
 import React from "react";
+import * as ReactRedux from "react-redux";
 import img from "./images";
 import "./index.css";
 
@@ -25,10 +26,13 @@ export const Header = ({ currentPage }) => {
   React.useEffect(() => {
     var myCarousel = document.querySelector('#carouselExampleIndicators')
     var carousel = new window.bootstrap.Carousel(myCarousel, {
-      interval: 2000,
+      // interval: 2000,
       wrap: false
     })
   }, [currentImages]);
+
+  const strings = ReactRedux.useSelector((state) => state.strings);
+  const lang = ReactRedux.useSelector((state) => state.lang);
 
   return (
     <header id="header" className="">
@@ -49,7 +53,7 @@ export const Header = ({ currentPage }) => {
               {currentImages.map((image, i) => (
                 <button
                   key={i}
-                  type="button"
+                  type="button" 
                   data-bs-target="#carouselExampleIndicators"
                   data-bs-slide-to={i + 1}
                   className="active"
@@ -57,42 +61,26 @@ export const Header = ({ currentPage }) => {
                   aria-label={"Slide " + (i + 1)}
                 />
               ))}
-              {/* <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="0"
-                className="active"
-                aria-current="true"
-                aria-label="Slide 1"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="1"
-                aria-label="Slide 2"
-              ></button>
-              <button
-                type="button"
-                data-bs-target="#carouselExampleIndicators"
-                data-bs-slide-to="2"
-                aria-label="Slide 3"
-              ></button> */}
-            </div>
+            </div> 
             <div className="carousel-inner">
-              {currentImages.map((image, i) => (
+              {/* {currentImages.map((image, i) => (
                 <div key={i} className="carousel-item active">
-                  <img src={image} className="d-block" alt="img1" />
+                  <img src={image} className="d-block" alt="image1" />
                 </div>
-              ))}
-              {/* <div className="carousel-item active">
+              ))} */}
+              <div className="carousel-item active">
                 <img src={img.img1} className="d-block" alt="img1" />
+                <div className="img-text">
+                  <h1> {strings[lang]["head-company-name"]} </h1>
+                  <p> {strings[lang]["head-company-info"]} </p>
+                </div>
               </div>
               <div className="carousel-item">
                 <img src={img.img2} className="d-block" alt="img2" />
               </div>
               <div className="carousel-item">
                 <img src={img.img3} className="d-block" alt="img3" />
-              </div> */}
+              </div>
             </div>
             <button
               className="carousel-control-prev"
@@ -117,7 +105,7 @@ export const Header = ({ currentPage }) => {
             <SocialIcons />
           </div>
         </div>
-      </div>
+      </div>    
     </header>
   );
 };

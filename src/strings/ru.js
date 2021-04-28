@@ -69,8 +69,7 @@ const ru = {
     "status-name": "Завершен",   
 
     // News
-    "news-title":"Новости",
-    "status-name": "Завершен",  
+    "news-title":"Новости", 
     
     // career
     "career-title": "Почему вы должны присоединиться к нам?",

@@ -54,6 +54,11 @@
     border-radius: 5px;
 }
 
+#contacts iframe {
+    width: 100%;
+    margin-top: 150px;
+}
+
 @media (max-width: 770px) {
     #contacts .facts-section {
         display: flex;

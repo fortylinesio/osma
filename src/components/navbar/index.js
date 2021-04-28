@@ -1,10 +1,10 @@
 import React from "react";
+import * as ReactRedux from "react-redux";
 import { Link } from "react-router-dom";
 
-import * as ReactRedux from "react-redux";
 import logo from "./logo.svg";
-
 import "./index.css";
+
 
 export const Navbar = ({ currentPage }) => {
   const strings = ReactRedux.useSelector((state) => state.strings);
