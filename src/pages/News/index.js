@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import * as ReactRedux from "react-redux";
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import img from "./images";
 
 // import "./headerNews.js";
@@ -25,7 +25,9 @@ export const News = () => {
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
-                    <p className="not">Подробнее</p>
+                    <Link to="news-info">
+                      <p className="not">Подробнее</p>
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -41,7 +43,9 @@ export const News = () => {
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
-                    <p className="not">Подробнее</p>
+                    <Link to="news-info">
+                      <p className="not">Подробнее</p>
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -59,7 +63,9 @@ export const News = () => {
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
-                    <p className="not">Подробнее</p>
+                    <Link to="news-info">
+                      <p className="not">Подробнее</p>
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -75,7 +81,9 @@ export const News = () => {
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
-                    <p className="not">Подробнее</p>
+                    <Link to="news-info">
+                      <p className="not">Подробнее</p>
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -91,7 +99,9 @@ export const News = () => {
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
-                    <p className="not">Подробнее</p>
+                    <Link to="news-info">
+                      <p className="not">Подробнее</p>
+                    </Link>
                   </a>
                 </div>
               </div>
@@ -107,7 +117,9 @@ export const News = () => {
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">
-                    <p className="not">Подробнее</p>
+                    <Link to="news-info">
+                      <p className="not">Подробнее</p>
+                    </Link>
                   </a>
                 </div>
               </div>

@@ -24,9 +24,9 @@ export const Header = ({ currentPage }) => {
   }, [currentPage]);
 
   React.useEffect(() => {
-    var myCarousel = document.querySelector('#carouselExampleIndicators')
-    var carousel = new window.bootstrap.Carousel(myCarousel, {
-      // interval: 2000,
+    const myCarousel = document.querySelector('#carouselExampleIndicators')
+    const carousel = new window.bootstrap.Carousel(myCarousel, {
+      interval: 2000,
       wrap: false
     })
   }, [currentImages]);

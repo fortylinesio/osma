@@ -36,6 +36,7 @@ function App() {
       <Route exact path="/objects" component={Pages.Objects} />
       <Route exact path="/objects-info" component={Pages.ObjectsInfo} />
       <Route exact path="/news" component={Pages.News} />
+      <Route exact path="/news-info" component={Pages.NewsInfo} />
       <Route exact path="/career" component={Pages.Career} />
       <Route exact path="/contacts" component={Pages.Contacts} />
       <Components.Footer />
