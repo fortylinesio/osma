@@ -1,34 +1,59 @@
 import React from "react";
+import Carousel from "react-elastic-carousel";
 import * as ReactRedux from "react-redux";
-import img from "./images";
-import "./index.css";
 
 import { SocialIcons } from ".."
+import img from "./images";
+
+import "./index.css";
+
+/**
+ * Used React Ealstic Carousel as a slider component. For more info:
+ * https://sag1v.github.io/react-elastic-carousel/#styling
+ */
 
 export const Header = ({ currentPage }) => {
+  
+  /* TODO: define the real images for all pages */
 
   const pageImages = {
     '/': [
       img.img1,
       img.img2,
     ],
+    '/objects': [
+      img.img1,
+      img.img2,
+    ],
     '/news': [
       img.img3,
+      img.img4,
+    ],
+    '/news-info': [
+      img.img3,
+      img.img4,
+    ],
+    '/career': [
+      img.img1,
+      img.img2,
+    ],
+    '/contacts': [
+      img.img3,
+      img.img4,
     ],
   }
 
+  const carouselRef = React.useRef(null);
+
   const [currentImages, setCurrentImages] = React.useState(pageImages[currentPage]);
+  const [currPos, setCurrPos] = React.useState(0);
 
   React.useEffect(() => {
     setCurrentImages(pageImages[currentPage] || [])
   }, [currentPage]);
 
   React.useEffect(() => {
-    const myCarousel = document.querySelector('#carouselExampleIndicators')
-    const carousel = new window.bootstrap.Carousel(myCarousel, {
-      interval: 2000,
-      wrap: false
-    })
+    carouselRef.current.goTo(0);
   }, [currentImages]);
 
   const strings = ReactRedux.useSelector((state) => state.strings);
@@ -42,70 +67,37 @@ export const Header = ({ currentPage }) => {
           <div className='col bg-area' />
         </div>
       </div>
-      <div className="container-fluid">
-        <div className="row bg-image">
-          <div
-            id="carouselExampleIndicators"
-            className="col-11 carousel slide container"
-            data-bs-ride="carousel"
-          >
-            <div className="carousel-indicators">
-              {currentImages.map((image, i) => (
-                <button
-                  key={i}
-                  type="button" 
-                  data-bs-target="#carouselExampleIndicators"
-                  data-bs-slide-to={i + 1}
-                  className="active"
-                  aria-current="true"
-                  aria-label={"Slide " + (i + 1)}
-                />
-              ))}
-            </div> 
-            <div className="carousel-inner">
-              {/* {currentImages.map((image, i) => (
-                <div key={i} className="carousel-item active">
-                  <img src={image} className="d-block" alt="image1" />
-                </div>
-              ))} */}
-              <div className="carousel-item active">
-                <img src={img.img1} className="d-block" alt="img1" />
-                <div className="img-text">
-                  <h1> {strings[lang]["head-company-name"]} </h1>
-                  <p> {strings[lang]["head-company-info"]} </p>
-                </div>
-              </div>
-              <div className="carousel-item">
-                <img src={img.img2} className="d-block" alt="img2" />
-              </div>
-              <div className="carousel-item">
-                <img src={img.img3} className="d-block" alt="img3" />
-              </div>
+      <div className="container-fluid carousel-holder">
+        <Carousel
+          className='carousel'
+          showArrows={false}
+          enableMouseSwipe={false}
+          ref={carouselRef}
+          onChange={(currentItem) => setCurrPos(currentItem.index)}
+        >
+          {currentImages.map((image, i) => (
+            <div key={i}>
+              <img style={{ maxWidth: '100%' }} src={image} alt={'Image ' + (i + 1)} />
             </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="prev"
-            >
-              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide="next"
-            >
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Next</span>
-            </button>
+          ))}
+        </Carousel>
+        <div className='arrows'>
+          <div className='counter'>
+            {formatNumberToDecimal(currPos + 1)} / {formatNumberToDecimal(currentImages.length)}
           </div>
-          <div className="col-1 d-flex align-items-center">
-            <SocialIcons />
-          </div>
+          <button className='arrow prev' onClick={e => {
+            carouselRef.current.slidePrev();
+          }}>Prev</button>
+          <button className='arrow next' onClick={e => {
+            carouselRef.current.slideNext();
+          }}>Next</button>
         </div>
-      </div>    
+      </div>
+      <SocialIcons />
     </header>
   );
 };
+
+const formatNumberToDecimal = (n) => {
+  return n < 10 ? '0' + n : n;
+}
