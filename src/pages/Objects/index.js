@@ -6,15 +6,13 @@ import "./index.css";
 
 
 export const Objects = () => {
-  const [data, setData] = useState(null)
-
-  
-  const content_array = data?.[0]?.content?.rendered.split('\n\n\n\n');
-  const address = content_array?.[0];
-  // console.log(content_array);
-
   const strings = ReactRedux.useSelector((state) => state.strings);
   const lang = ReactRedux.useSelector((state) => state.lang);
+
+  const [data, setData] = useState(null);
+
+  const content_array = data?.[0]?.content?.rendered.split('\n\n\n\n');
+  const address = content_array?.[0];
 
   useEffect(() => {
      fetch('https://osmagroup.000webhostapp.com/wp-json/wp/v2/building-objects')
@@ -22,22 +20,19 @@ export const Objects = () => {
     .then(json => {
       setData(json)
     })
-  }, [])
-
-  console.log(data);
+  }, []);
 
   return (
     <div id="objects-page" className="">
       <div id="objects" className="container">
         <div className="row row-cols-3 justify-content-center">
           <div className="col card">
-            <img className="card-img-top" alt='card-top' />
+            <img className="card-img-top" alt='' />
             <div className="card-body">
               {
                 data?
-                <h6 className="card-title"> {data?.[0]?.title?.rendered} </h6>: ""
+                <h6 className="card-title"> {data?.[0]?.title?.rendered} </h6> : ""
               }
-              {/* <h6 className="card-title">{strings[lang]["objects-title"]}</h6> */}
               <div className="d-flex flex-row card-address">
                 <svg
                   className="geo-icon"
@@ -55,23 +50,21 @@ export const Objects = () => {
                 </svg>
                 {
                   address?
-                  <p className="geo-text"> {address} </p>: ""
+                  <p className="geo-text" dangerouslySetInnerHTML={{ __html: address }} /> : ""
                 }
-                {/* <p className="geo-text">{strings[lang]["objects-address"]}</p> */}
               </div>
-              <Link to="/objects-info" className="card-link">
-                {strings[lang]["objects-more"]}
-              </Link>
+                <Link to="/objects-info" className="card-link">                    
+                  {strings[lang]["objects-more"]}
+                </Link> 
             </div>
           </div>
           <div className="col card">
-            <img className="card-img-top" alt='card-top' />
+            <img className="card-img-top" alt='' />
             <div className="card-body">
               {
                 data?
                 <h6 className="card-title"> {data?.[0]?.title?.rendered} </h6>: ""
               }
-              {/* <h6 className="card-title">{strings[lang]["objects-title"]}</h6> */}
               <div className="d-flex flex-row card-address">
                 <svg
                   className="geo-icon"
@@ -87,7 +80,10 @@ export const Objects = () => {
                     fill="#054468"
                   />
                 </svg>
-                <p className="geo-text">{strings[lang]["objects-address"]}</p>
+                {
+                  address?
+                  <p className="geo-text" dangerouslySetInnerHTML={{ __html: address }} /> : ""
+                }
               </div>
               <Link to="/objects-info" className="card-link">
                 {strings[lang]["objects-more"]}
@@ -95,13 +91,12 @@ export const Objects = () => {
             </div>
           </div>
           <div className="col card">
-            <img className="card-img-top" alt='card-top' />
+            <img className="card-img-top" alt='' />
             <div className="card-body">
               {
                 data?
                 <h6 className="card-title"> {data?.[0]?.title?.rendered} </h6>: ""
               }
-              {/* <h6 className="card-title">{strings[lang]["objects-title"]}</h6> */}
               <div className="d-flex flex-row card-address">
                 <svg
                   className="geo-icon"
@@ -117,7 +112,10 @@ export const Objects = () => {
                     fill="#054468"
                   />
                 </svg>
-                <p className="geo-text">{strings[lang]["objects-address"]}</p>
+                {
+                  address?
+                  <p className="geo-text" dangerouslySetInnerHTML={{ __html: address }} /> : ""
+                }
               </div>
               <div className="">
                 <Link to="/objects-info" className="card-link">

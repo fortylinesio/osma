@@ -102,6 +102,10 @@
     text-decoration: none;
 }
 
+#header div.rec-pagination {
+    display: none;
+  }
+
 @media (max-width: 480px) {
     #header .active p {
         margin-right: 10px; 

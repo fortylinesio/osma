@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, { useState, useEffect, Component} from "react";
 import * as ReactRedux from "react-redux";
 import { Link } from 'react-router-dom';
 import img from "./images";
@@ -7,8 +7,19 @@ import img from "./images";
 import "./index.css";
 
 export const News = () => {
+  const [data, setData] = useState(null);
+
   const strings = ReactRedux.useSelector((state) => state.strings);
   const lang = ReactRedux.useSelector((state) => state.lang);
+
+  useEffect(() => {
+    fetch('https://osmagroup.000webhostapp.com/wp-json/wp/v2/news')
+   .then(res => res.json())
+   .then(json => {
+     setData(json)
+   })
+  }, []);
+
   return (
     <div>
       {/* <Link to="/headerNews" className="card-link" /> */}
@@ -19,9 +30,13 @@ export const News = () => {
             <div className="card card-cstm h-100">
               <img src={img.img1} className="card-img-top img-1" alt="..." />
               <div className="card-body card-body-cstm">
-                <p className="card-text">
+              {
+                data?
+                <p className="card-title"> {data?.[0]?.title?.rendered} </p> : ""
+              }
+                {/* <p className="card-text">
                   Коттеджный городок в с. Люксембург Ысык-Атинского района
-                </p>
+                </p> */}
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">

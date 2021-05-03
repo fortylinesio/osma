@@ -41,5 +41,9 @@
         margin-right: 0px;
         
     }
+
+    #objects-info .table {
+        margin-top: 50px;
+    }
 }
 

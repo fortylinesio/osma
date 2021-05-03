@@ -22,24 +22,28 @@ export const Header = ({ currentPage }) => {
       img.img2,
     ],
     '/objects': [
-      img.img1,
+      img.img2,
       img.img2,
     ],
-    '/news': [
+    '/objects-info': [
       img.img3,
+      img.img3,
+    ],
+    '/news': [
+      img.img4,
       img.img4,
     ],
     '/news-info': [
-      img.img3,
-      img.img4,
+      img.img5,
+      img.img5,
     ],
     '/career': [
-      img.img1,
-      img.img2,
+      img.img6,
+      img.img6,
     ],
     '/contacts': [
-      img.img3,
-      img.img4,
+      img.img7,
+      img.img7,
     ],
   }
 
