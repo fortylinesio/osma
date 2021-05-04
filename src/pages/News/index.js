@@ -34,9 +34,6 @@ export const News = () => {
                 data?
                 <p className="card-title"> {data?.[0]?.title?.rendered} </p> : ""
               }
-                {/* <p className="card-text">
-                  Коттеджный городок в с. Люксембург Ысык-Атинского района
-                </p> */}
                 <div className="row row-not">
                   <p className="col not">26.01.2021</p>
                   <a className="col" href="#">

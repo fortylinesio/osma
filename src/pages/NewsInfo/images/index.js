@@ -6,11 +6,11 @@ import img5 from "./5.JPG";
 
 
 const images = {
-//   img1,
-//   img2,
-//   img3,
-//   img4,
-//   img5,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
 };
 
 export default images;

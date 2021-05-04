@@ -31,27 +31,30 @@ export const NewsInfo = () => {
 
     return (
         <div id="news-info" className="container">
+            {
+              data?
+              <h6 className="card-title"> {data?.[0]?.title?.rendered} </h6> : ""
+            }
             <p className="news-date"> {strings[lang]["news-date"]} </p>
             {
               description?
               <p className="news-date" dangerouslySetInnerHTML={{ __html: description }} /> : ""
             }
-            {/* <p className="news-description"> {strings[lang]["news-description"]} </p> */}
             <div className="news-gallery">
                 <Carousel breakPoints={breakPoints}>
-                    <Item className="photo">
+                    <Item className="gallery-item">
                         <img src={images.img1} alt="image-gallery" width="260px" height="180px" />
                     </Item>
-                    <Item className="photo">
+                    <Item className="gallery-item">
                         <img src={images.img2} alt="image-gallery" width="260px" height="180px" />
                     </Item>
-                    <Item className="photo">
+                    <Item className="gallery-item">
                         <img src={images.img3} alt="image-gallery" width="260px" height="180px" />
                     </Item>
-                    <Item className="photo">
+                    <Item className="gallery-item">
                         <img src={images.img4} alt="image-gallery" width="260px" height="180px" />
                     </Item>
-                    <Item className="photo">
+                    <Item className="gallery-item">
                         <img src={images.img5} alt="image-gallery" width="260px" height="180px" />
                     </Item>                
                 </Carousel>
