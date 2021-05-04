@@ -101,11 +101,11 @@ export const NavbarMobile = () => {
           />
         </a>
         <ul className="navbar-nav">
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a href="#" className="nav-link">
               <i className="fas fa-search" />
             </a>
-          </li>
+          </li> */}
           <li className="nav-item">
             <a href="#" className="nav-link">
               {strings[lang]}

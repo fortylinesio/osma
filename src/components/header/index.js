@@ -13,37 +13,91 @@ import "./index.css";
  */
 
 export const Header = ({ currentPage }) => {
-  
-  /* TODO: define the real images for all pages */
 
   const pageImages = {
     '/': [
-      img.img1,
-      img.img2,
+      {
+        image: img.img1,
+        title: "OSMA GROUP",
+        subtitle: "Osma  Group занимается строительно-монтажными работами любой сложности начиная с отделочных работ заканчивая строительством зданий повышенной ответственности.",       
+      },
+      {
+        image: img.img2,
+        title: "",
+        subtitle: "",       
+      },
     ],
     '/objects': [
-      img.img2,
-      img.img2,
+      {
+        image: img.img2,
+        title: "",
+        subtitle: "",       
+      },
+      {
+        image: img.img2,
+        title: "",
+        subtitle: "",       
+      },
     ],
     '/objects-info': [
-      img.img3,
-      img.img3,
+      {
+        image: img.img3,
+        title: "",
+        subtitle: "",       
+      },
+      {
+        image: img.img3,
+        title: "",
+        subtitle: "",       
+      },
     ],
     '/news': [
-      img.img4,
-      img.img4,
+      {
+        image: img.img4,
+        title: "",
+        subtitle: "",       
+      },
+      {
+        image: img.img4,
+        title: "",
+        subtitle: "",       
+      },
     ],
     '/news-info': [
-      img.img5,
-      img.img5,
+      {
+        image: img.img5,
+        title: "",
+        subtitle: "",       
+      },
+      {
+        image: img.img5,
+        title: "",
+        subtitle: "",       
+      },
     ],
     '/career': [
-      img.img6,
-      img.img6,
+      {
+        image: img.img6,
+        title: "",
+        subtitle: "",       
+      },
+      {
+        image: img.img6,
+        title: "",
+        subtitle: "",       
+      },
     ],
     '/contacts': [
-      img.img7,
-      img.img7,
+      {
+        image: img.img7,
+        title: "",
+        subtitle: "",       
+      },
+      {
+        image: img.img7,
+        title: "",
+        subtitle: "",       
+      },
     ],
   }
 
@@ -51,6 +105,7 @@ export const Header = ({ currentPage }) => {
 
   const [currentImages, setCurrentImages] = React.useState(pageImages[currentPage]);
   const [currPos, setCurrPos] = React.useState(0);
+
 
   React.useEffect(() => {
     setCurrentImages(pageImages[currentPage] || [])
@@ -73,31 +128,42 @@ export const Header = ({ currentPage }) => {
       </div>
       <div className="container-fluid carousel-holder">
         <Carousel
-          className='carousel'
+          className="carousel"
           showArrows={false}
           enableMouseSwipe={false}
           ref={carouselRef}
           onChange={(currentItem) => setCurrPos(currentItem.index)}
         >
-          {currentImages.map((image, i) => (
-            <div key={i}>
-              <img style={{ maxWidth: '100%' }} src={image} alt={'Image ' + (i + 1)} />
+          {currentImages.map((item, i) => (
+            <div key={i} className="carousel-slide">
+              <div className="carousel-slide-details">
+                <h1>{item.title}</h1>
+                <p>{item.subtitle}</p>
+              </div>
+              <img className="carousel-slide-image" style={{ maxWidth: '100%' }} src={item.image} alt={'Image ' + (i + 1)} />
             </div>
           ))}
         </Carousel>
+
         <div className='arrows'>
           <div className='counter'>
             {formatNumberToDecimal(currPos + 1)} / {formatNumberToDecimal(currentImages.length)}
           </div>
-          <button className='arrow prev' onClick={e => {
-            carouselRef.current.slidePrev();
-          }}>Prev</button>
-          <button className='arrow next' onClick={e => {
-            carouselRef.current.slideNext();
-          }}>Next</button>
-        </div>
+          <button 
+            className='carousel-control-prev arrow' 
+            onClick={e => { carouselRef.current.slidePrev(); }}>
+              <span className="carousel-control-prev-icon" aria-hidden="true"/>
+          </button>
+          <button 
+            className='carousel-control-next arrow' 
+            onClick={e => { carouselRef.current.slideNext(); }}>
+              <span className="carousel-control-next-icon" aria-hidden="true" />
+          </button>
+        </div>        
       </div>
-      <SocialIcons />
+      <div >
+        <SocialIcons />
+      </div>
     </header>
   );
 };

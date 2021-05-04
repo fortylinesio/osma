@@ -50,6 +50,7 @@ const ru = {
     "footer-fortylines":"| This web-site is made by Fortylines.io",
     
     // objects
+    "objects-name": "Объекты",
     "objects-title": "Многоэтажный жилой дом",
     "objects-address": "г. Бишкек, мкр.  Джал-23",
     "objects-more": "Подробнее",

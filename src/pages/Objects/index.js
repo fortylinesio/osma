@@ -25,6 +25,7 @@ export const Objects = () => {
   return (
     <div id="objects-page" className="">
       <div id="objects" className="container">
+      <h1 className="objects-name">{strings[lang]["objects-name"]}</h1>
         <div className="row row-cols-3 justify-content-center">
           <div className="col card">
             <img className="card-img-top" alt='' />
@@ -121,18 +122,6 @@ export const Objects = () => {
                 <Link to="/objects-info" className="card-link">
                   {strings[lang]["objects-more"]}
                 </Link>
-                {/* <svg 
-                          width="9" 
-                          height="12" 
-                          viewBox="0 0 9 12" 
-                          fill="none" 
-                          xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path 
-                            d="M0.894043 10.59L5.43351 6L0.894043 1.41L2.29156 0L8.23847 6L2.29156 12L0.894043 10.59Z" 
-                            fill="#054468"
-                        />
-                      </svg> */}
               </div>
             </div>
           </div>

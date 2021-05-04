@@ -10,6 +10,7 @@ export const ObjectsInfo = () => {
     const [data, setData] = useState(null);
 
     const content_array = data?.[0]?.content?.rendered.split('\n\n\n\n');
+    const address = content_array?.[0];
     const info1 = content_array?.[1];
     const info2 = content_array?.[2];
     const fact = content_array?.[3];
@@ -26,50 +27,46 @@ export const ObjectsInfo = () => {
 
     return (
         <div id="objects-info" className="container">
-            {
-              fact?
-              <h2 className="geo-text" dangerouslySetInnerHTML={{ __html: fact }} /> : ""
-            }
-            {/* <h2 className="col-10 d-flex justify-content-end"> {strings[lang]["fact"]} </h2> */}
+            <div className="d-flex flex-row card-address">
+                <svg
+                  className="geo-icon"
+                  width="15"
+                  height="25"
+                  viewBox="0 0 20 30"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd" d="M9.94473 0C4.72841 0 0.509521 4.695 0.509521 10.5C0.509521 18.375 9.94473 30 9.94473 30C9.94473 30 19.3799 18.375 19.3799 10.5C19.3799 4.695 15.1611 0 9.94473 0ZM3.2053 10.5C3.2053 6.36 6.22456 3 9.94473 3C13.6649 3 16.6842 6.36 16.6842 10.5C16.6842 14.82 12.8023 21.285 9.94473 25.32C7.14113 21.315 3.2053 14.775 3.2053 10.5ZM6.57502 10.5C6.57502 8.42893 8.08369 6.75 9.94473 6.75C11.1486 6.75 12.2611 7.46475 12.863 8.625C13.4649 9.78525 13.4649 11.2147 12.863 12.375C12.2611 13.5353 11.1486 14.25 9.94473 14.25C8.08369 14.25 6.57502 12.5711 6.57502 10.5Z"
+                    fill="#054468"
+                  />
+                </svg>
+                {
+                  address?
+                  <p className="address" dangerouslySetInnerHTML={{ __html: address }} /> : ""
+                }
+            </div>
             <div className="row row-cols facts-section">
                 <div className="col fact-text">
                     {
                       info1?
-                      <p className="geo-text" dangerouslySetInnerHTML={{ __html: info1 }} /> : ""
+                      <p className="" dangerouslySetInnerHTML={{ __html: info1 }} /> : ""
                     }
                     {
                       info2?
-                      <p className="geo-text" dangerouslySetInnerHTML={{ __html: info2 }} /> : ""
+                      <p className="" dangerouslySetInnerHTML={{ __html: info2 }} /> : ""
                     }
-                    {/* <p style={{ marginBottom: "40px" }}> {strings[lang]["fact-description-top"]} </p>
-                    <h5> {strings[lang]["fact-title"]} </h5>
-                    <p> {strings[lang]["fact-description-bottom"]} </p> */}
                 </div>
                 <div className="col fact-table">
                     {
-                      table?
-                      <p className="geo-text" dangerouslySetInnerHTML={{ __html: table }} /> : ""
+                      fact?
+                      <h2 className="fact" dangerouslySetInnerHTML={{ __html: fact }} /> : ""
                     }
-                    {/* <table className="table">
-                        <tbody>
-                            <tr>
-                                <td className="td"><b> {strings[lang]["city"]} </b></td>
-                                <td> {strings[lang]["city-name"]} </td>
-                            </tr>
-                            <tr>
-                                <td className="td"><b> {strings[lang]["beginning"]} </b></td>
-                                <td> {strings[lang]["beginning-date"]} </td>
-                            </tr>
-                            <tr>
-                                <td className="td"><b> {strings[lang]["handing"]} </b></td>
-                                <td> {strings[lang]["handing-date"]} </td>
-                            </tr>
-                            <tr>
-                                <td className="td"><b> {strings[lang]["status"]} </b></td>
-                                <td> {strings[lang]["status-name"]} </td>
-                            </tr>
-                        </tbody>
-                    </table> */}
+                    {
+                      table?
+                      <p className="table" dangerouslySetInnerHTML={{ __html: table }} /> : ""
+                    }
                 </div>
             </div>
         </div>

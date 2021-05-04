@@ -7,14 +7,9 @@ import "./index.css";
 
 
 export const Navbar = ({ currentPage }) => {
-  const strings = ReactRedux.useSelector((state) => state.strings);
   const lang = ReactRedux.useSelector((state) => state.lang);
+  const strings = ReactRedux.useSelector((state) => state.strings);
 
-
-  // const handleLanguageClick = (lang: 'en' | 'de' | 'ru') => (e: React.MouseEvent) => {
-  //   e.preventDefault();
-  //   dispatch(AppRedux.SetLanguage(lang));
-  // };
 
   return (
     <nav id="navigation-bar" className="navbar navbar-expand-lg navbar-light">
@@ -28,11 +23,11 @@ export const Navbar = ({ currentPage }) => {
             className="d-inline-block align-top"
           />
         </a>
-        <div className="collapse navbar-collapse d-flex justify-content-center" id="navbarNav">
+        <div className="collapse navbar-collapse d-flex justify-content-start" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/" className="nav-link" style={{ textDecoration: "none" }}>
-                {strings.ru["nav-main"]}
+                {strings[lang]["nav-main"]}
               </Link>
             </li>
             <li className="nav-item">
@@ -50,7 +45,7 @@ export const Navbar = ({ currentPage }) => {
             </li>
             <li className="nav-item">
               <Link to="/objects" className="nav-link" style={{ textDecoration: "none" }}>
-                {strings.ru["nav-projects"]}
+                {strings[lang]["nav-projects"]}
               </Link>
             </li>
             <li className="nav-item">
@@ -70,15 +65,19 @@ export const Navbar = ({ currentPage }) => {
             </li>
           </ul>
         </div>
-        <form className="d-flex">
-          <input
-            className="form-control me-2"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-        </form>
-        <i className="d-flex fas fa-search"></i>
+        {/* <div className="">
+          <form className="d-flex">
+            <input
+              className="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+        </div>
+        <a href="#" className="search-icon">
+          <i className="d-flex fas fa-search" onClick={() => setMenuOpen(true)}/>
+        </a> */}
         <ul className="d-flex lang-select">
           <select className="form-select" aria-label="language">
             <option defaultValue="ru">{strings[lang]["nav-lang-ru"]}</option>

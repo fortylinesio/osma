@@ -4,6 +4,7 @@
 
 #navigation-bar .navbar-brand {
     padding-left: 50px;
+    background-image: none;
 }
 
 #navigation-bar #navbarNav {
@@ -36,16 +37,6 @@
     border: none;
 }
 
-#navigation-bar form {
-    visibility: hidden;
-    width: 150px;
-    margin-left: 20px;
-}
-
-/* #navigation-bar form:hover {
-    visibility: none;
-} */
-
 #navigation-bar select {
     border: none;
     background: none;
@@ -58,6 +49,18 @@
 
 #navigation-bar .form-select {
     padding: 0;
+}
+
+@media (max-width: 1165px) {
+    #navigation-bar #navbarNav {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 1080px) {
+    #navigation-bar .nav-item {
+        margin-left: 5px;
+    }
 }
 
 @media (max-width: 992px) {

@@ -10,7 +10,7 @@
 
 #about-us .about-us-title {
     font-size: 50px;
-    margin-top: 40px;
+    margin-top: 70px;
     margin-bottom: 20px;
 }
 
@@ -26,13 +26,13 @@
 }
 
 #about-us .bg-image {
-    height: 750px;
+    height: 780px;
     background-image: url(./images/about-us.jpg);
     clip-path: circle(50% at 50% 50%);
     background-repeat: no-repeat;
     background-size: cover;
     padding-left: 0;
-    margin: -70px -160px -70px 0;
+    margin: -70px -180px -70px 0;
 }
 
 @media (max-width: 990px) {

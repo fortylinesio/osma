@@ -3,6 +3,12 @@
     margin-bottom: 100px;
 }
 
+#objects .objects-name {
+    margin-top: -100px;
+    margin-bottom: 100px;
+    color: #00283F;
+}
+
 #objects .card{
     width: 300px;
     margin: 15px;
