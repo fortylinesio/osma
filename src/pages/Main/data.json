@@ -1,0 +1,18 @@
+{
+    "counts": [
+        {   "id":"1",
+            "finalNumber":"1000",
+            "duration":"2"
+        },
+        {
+            "id":"2",
+            "finalNumber":"2500",
+            "duration":"2"
+        },
+        {   
+            "id":"3",
+            "finalNumber":"200",
+            "duration":"2"
+        }
+    ]
+}

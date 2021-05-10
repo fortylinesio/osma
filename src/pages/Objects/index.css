@@ -1,0 +1,43 @@
+#objects {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#objects .objects-name {
+    margin-top: -100px;
+    margin-bottom: 100px;
+    color: #00283F;
+}
+
+#objects .card{
+    width: 300px;
+    margin: 15px;
+    padding: 0;
+}
+
+#objects .card-title{
+    margin-top: 15px;
+}
+
+#objects .card-address{
+    margin-top: 15px 
+}
+
+#objects .card-img-top {
+    height: 300px;
+    background: url(./images/img-1.JPG);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#objects .card-body {
+    /* margin: 10px 0 10px 0; */
+}
+
+#objects .card-body a {
+    text-decoration: none;
+}
+
+#objects .card-body .geo-icon {
+    margin-right: 15px;
+}

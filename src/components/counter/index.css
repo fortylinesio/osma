@@ -1,0 +1,8 @@
+#counter {
+    margin: 200px 0 200px 0;
+}
+#counter p {
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+}

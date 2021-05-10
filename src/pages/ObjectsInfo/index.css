@@ -1,0 +1,60 @@
+#objects-info {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#objects-info > .card-address{
+    margin: -100px 0 100px 50px;
+}
+
+#objects-info > .card-address > .geo-icon {
+    margin-right: 15px;
+}
+
+#objects-info .facts-section {
+    margin-top: 150px;
+}
+
+#objects-info .fact-text {
+    flex: 2;
+    margin-right: 50px;
+    margin-bottom: 100px;
+}
+
+#objects-info .fact-table {
+    margin-top: -60px;
+}
+
+#objects-info .fact-table > h2 {
+    margin-bottom: 30px;
+}
+
+#objects-info .table {
+    box-shadow: -3px 10px 15px rgba(0, 0, 0, 0.25);
+    border-color: white;
+}
+
+#objects-info .table td {
+    padding-left: 50px;
+}
+
+@media (max-width: 995px) {  
+    #objects-info > .card-address > .geo-icon {
+        display: none;
+    }
+
+    #objects-info > .card-address > .address {
+        display: none;
+    }
+}
+
+@media (max-width: 770px) {
+    #objects-info .facts-section {
+        display: block;
+    }
+
+    #objects-info .table {
+        margin-top: 50px;
+    }
+}
+
