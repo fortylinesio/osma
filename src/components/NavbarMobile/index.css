@@ -15,6 +15,20 @@
   margin-right: 24px;
 }
 
+/* #navigation-bar-mobile select {
+
+  border: none;
+  background: green;
+  color: black;
+}
+
+#navigation-bar-mobile select > option {
+  border: none;
+  padding: 5px;
+  background: #FFFFFF;
+  color: #00283F;
+} */
+
 #navigation-bar-mobile > .menu {
   position: fixed;
   background-color: #00283F;

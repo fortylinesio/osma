@@ -64,9 +64,17 @@
     font-size: 10pt;
 }
 
+#header .arrows > .carousel-control-prev {
+    margin-left: 110px;
+}
+
+#header .arrows > .carousel-control-next {
+    margin-right: 110px;
+}
+
 #header .arrows > .arrow {
     margin-bottom: -200px;
-    width: 35%;
+    width: 15%;
 }
 
 #header .rec-slider-container {
@@ -96,7 +104,6 @@
 
     #header .arrows > .arrow {
         margin-bottom: -200px;
-        width: 25%;
     }
 }  
 
@@ -112,6 +119,14 @@
     
     #header .carousel .carousel-slide > .carousel-slide-details > p {
         padding-right: 100px;
+    }
+    
+    #header .arrows > .carousel-control-prev {
+        margin-left: 20px;
+    }
+    
+    #header .arrows > .carousel-control-next {
+        margin-right: 20px;
     }
 }
 

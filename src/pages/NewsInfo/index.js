@@ -20,6 +20,7 @@ export const NewsInfo = () => {
 
     const content_array = data?.[0]?.content?.rendered.split('\n\n\n\n');
     const description = content_array?.[0];
+    const image = content_array?.[1];
 
     useEffect(() => {
         fetch('https://osmagroup.000webhostapp.com/wp-json/wp/v2/news')
@@ -42,7 +43,7 @@ export const NewsInfo = () => {
             }
             <div className="news-gallery">
                 <Carousel breakPoints={breakPoints}>
-                    <Item className="gallery-item">
+                    <Item className="gallery-item">                        
                         <img src={images.img1} alt="image-gallery" width="260px" height="180px" />
                     </Item>
                     <Item className="gallery-item">

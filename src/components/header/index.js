@@ -22,9 +22,9 @@ export const Header = ({ currentPage }) => {
         subtitle: "Osma  Group занимается строительно-монтажными работами любой сложности начиная с отделочных работ заканчивая строительством зданий повышенной ответственности.",       
       },
       {
-        image: img.img2,
-        title: "",
-        subtitle: "",       
+        image: img.img8,
+        title: "OSMA GROUP",
+        subtitle: "Osma  Group занимается строительно-монтажными работами любой сложности начиная с отделочных работ заканчивая строительством зданий повышенной ответственности.",       
       },
     ],
     '/objects': [
@@ -161,9 +161,7 @@ export const Header = ({ currentPage }) => {
           </button>
         </div>        
       </div>
-      <div >
-        <SocialIcons />
-      </div>
+      <SocialIcons />
     </header>
   );
 };

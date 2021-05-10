@@ -42,11 +42,11 @@ const ru = {
     "footer-careers": "Карьера",
     "footer-city":"г. Бишкек",
     "footer-street":"ул. Огонбаева 145",
-    "footer-mail":"osma.@gmail.com",
+    "footer-mail":"osma.groupkg@gmail.com",
     "footer-phone":"+996557100205",
     "footer-schedule":"Пн-Пт с 9:00 – 18:00",
     "footer-contact-us":"Свяжитесь с нами:",
-    "footer-copyright":"© 2021 Copyright: Osma construction ",
+    "footer-copyright":"© 2021 Copyright: Osma Group ",
     "footer-fortylines":"| This web-site is made by Fortylines.io",
     
     // objects
