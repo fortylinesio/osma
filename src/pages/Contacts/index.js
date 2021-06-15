@@ -1,10 +1,29 @@
 import React from 'react';
 import * as ReactRedux from "react-redux";
 import "./index.css";
+import emailjs from 'emailjs-com';
+
+// import ym from 'react-yandex-metrika';
+// ym('hit', '/contacts');
 
 export const Contacts = () => {
     const strings = ReactRedux.useSelector((state) => state.strings);
     const lang = ReactRedux.useSelector((state) => state.lang);
+
+    function sendEmail(emailData) {
+        emailData.preventDefault();
+
+        emailjs.sendForm('service_8yf00lt', 'template_h9ua91n', emailData.target, 'user_izbso7sF6rKtph5nXyO0x')
+            .then((result) => {
+                console.log(result.text);
+                if (!alert(result.text + '! ' + strings[lang]["career-sent-successful"]))
+                    window.location.reload();
+            }, (error) => {
+                console.log(error.text);
+                if (!alert(strings[lang]["career-sent-failed"] + '\n' + error.text))
+                    window.location.reload();
+            });
+    }
 
     return (
         <div id="contacts-page" className="">
@@ -45,7 +64,7 @@ export const Contacts = () => {
                                         fillRule="evenodd"
                                         clipRule="evenodd"
                                         d="M2 0.5H7.25C8.075 0.5 8.75 1.175 8.75 2C8.75 3.875 9.05 5.675 9.605 7.355C9.77 7.88 9.65 8.465 9.23 8.885L5.93 12.185C8.09 16.43 11.57 19.895 15.815 22.07L19.115 18.77C19.415 18.485 19.79 18.335 20.18 18.335C20.33 18.335 20.495 18.35 20.645 18.41C22.325 18.965 24.14 19.265 26 19.265C26.825 19.265 27.5 19.94 27.5 20.765V26C27.5 26.825 26.825 27.5 26 27.5C11.915 27.5 0.5 16.085 0.5 2C0.5 1.175 1.175 0.5 2 0.5ZM5.81014 3.5C5.90014 4.835 6.12514 6.14 6.48514 7.385L4.68514 9.185C4.07014 7.385 3.68014 5.48 3.54514 3.5H5.81014ZM20.6001 21.53C21.8751 21.89 23.1801 22.115 24.5001 22.205V24.44C22.5201 24.305 20.6151 23.915 18.8001 23.315L20.6001 21.53Z"
-                                        fill="white" />
+                                        fill="white"/>
                                 </svg>
                                 <p> {strings[lang]["contacts-number"]} </p>
                             </div>
@@ -62,7 +81,7 @@ export const Contacts = () => {
                                         fillRule="evenodd"
                                         clipRule="evenodd"
                                         d="M30 3C30 1.35 28.65 0 27 0H3C1.35 0 0 1.35 0 3V21C0 22.65 1.35 24 3 24H27C28.65 24 30 22.65 30 21V3ZM27 3L15 10.5L3 3H27ZM15 13.5L3 6V21H27V6L15 13.5Z"
-                                        fill="white" />
+                                        fill="white"/>
                                 </svg>
                                 <p> {strings[lang]["contacts-mail"]} </p>
                             </div>
@@ -70,23 +89,25 @@ export const Contacts = () => {
                     </div>
                     <div className="col contacts-form">
                         <div className="d-flex flex-column">
-                            <h5> {strings[lang]["contacts-feedback"]} </h5>
-                            <input placeholder={strings[lang]["contacts-name"]} required></input>
-                            <hr />
-                            <input placeholder={strings[lang]["contacts-phone"]} required></input>
-                            <hr />
-                            <input placeholder={strings[lang]["contacts-message"]} required></input>
-                            <hr />
-                            <button className="send-btn">{strings[lang]["contacts-send"]}</button>
+                            <form className="contact-form" onSubmit={sendEmail}>
+                                <h5> {strings[lang]["contacts-feedback"]} </h5>
+                                <input type="text" name="user_name" placeholder={strings[lang]["contacts-name"]} required/>
+                                <hr/>
+                                <input type="text" name="user_phone" maxLength={20} placeholder={strings[lang]["contacts-phone"]} required/>
+                                <hr/>
+                                <input name="message" placeholder={strings[lang]["contacts-message"]} required/>
+                                <hr/>
+                                <button className="send-btn" type="submit">{strings[lang]["contacts-send"]}</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-                <iframe 
+                <iframe
                     className="container-fluid"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.2240476804495!2d74.68997265068543!3d42.86811501075595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDUyJzA1LjIiTiA3NMKwNDEnMzEuOCJF!5e0!3m2!1sru!2skg!4v1620625580217!5m2!1sru!2skg" 
-                    height="450" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2924.224196036613!2d74.68996711542246!3d42.86811187915596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x389eb1ba94f15655%3A0xf589781683fb1c0d!2sOsma%20Group!5e0!3m2!1sru!2skg!4v1620743144037!5m2!1sru!2skg"
+                    height="450"
                     loading="lazy"
-                    title="map">                
+                    title="map">
                 </iframe>
             </div>
         </div>

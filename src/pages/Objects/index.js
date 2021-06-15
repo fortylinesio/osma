@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import "./index.css";
 
+// import ym from 'react-yandex-metrika';
+// ym('hit', '/objects');
 
 export const Objects = () => {
   const strings = ReactRedux.useSelector((state) => state.strings);

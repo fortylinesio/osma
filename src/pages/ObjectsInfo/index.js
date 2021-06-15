@@ -3,6 +3,9 @@ import * as ReactRedux from "react-redux";
 
 import "./index.css";
 
+// import ym from 'react-yandex-metrika';
+// ym('hit', '/object-info');
+
 export const ObjectsInfo = () => {
     const strings = ReactRedux.useSelector((state) => state.strings);
     const lang = ReactRedux.useSelector((state) => state.lang);

@@ -6,6 +6,9 @@ import img from "./images";
 // import "./headerNews.js";
 import "./index.css";
 
+// import ym from 'react-yandex-metrika';
+// ym('hit', '/news');
+
 export const News = () => {
   const [data, setData] = useState(null);
 

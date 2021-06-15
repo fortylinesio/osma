@@ -5,6 +5,9 @@ import Item from "./item";
 import images from "./images";
 import "./index.css";
 
+// import ym from 'react-yandex-metrika';
+// ym('hit', '/news-info');
+
 const breakPoints = [
     {width: 1, itemsToShow: 1},
     {width: 550, itemsToShow: 2, itemsToScroll: 2},
